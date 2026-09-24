@@ -57,15 +57,15 @@
     counters.forEach((c) => (c.textContent = c.dataset.count));
   }
 
-  /* Featured project toggle */
-  const featured = document.querySelector(".featured");
-  const toggle = document.querySelector(".featured-toggle");
-  if (featured && toggle) {
+  /* Featured project toggles (one per featured card) */
+  document.querySelectorAll(".featured-toggle").forEach((toggle) => {
+    const card = toggle.closest(".featured");
+    if (!card) return;
     toggle.addEventListener("click", () => {
-      const open = featured.classList.toggle("is-open");
+      const open = card.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", String(open));
     });
-  }
+  });
 
   /* Contact form → opens the visitor's mail client with a pre-filled message (no backend required) */
   const form = document.getElementById("contact-form");

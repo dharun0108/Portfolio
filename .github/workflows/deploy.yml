@@ -1,0 +1,80 @@
+name: CI/CD — Build, Validate & Deploy Portfolio
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one deployment at a time; a newer push cancels the older in-progress one
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  # ---------------------------------------------------------------- CI
+  build:
+    name: Build & Validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Check required files exist
+        run: |
+          set -e
+          for f in index.html css/style.css js/main.js assets/profile.jpg assets/Dharun_S_Resume.pdf; do
+            if [ ! -f "$f" ]; then echo "::error::Missing required file: $f"; exit 1; fi
+            echo "ok  $f"
+          done
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate HTML
+        run: npx --yes html-validate@8 --config .github/html-validate.json index.html
+
+      - name: Check for broken local links & assets
+        run: |
+          set -e
+          # every local href/src in index.html must point to an existing file
+          grep -oE '(href|src)="[^"#:]+"' index.html \
+            | sed -E 's/^(href|src)="//; s/"$//' \
+            | sort -u \
+            | while read -r p; do
+                [ -f "$p" ] || { echo "::error::Broken local reference: $p"; exit 1; }
+                echo "ok  $p"
+              done
+
+      - name: Prepare site artifact
+        run: |
+          mkdir -p _site
+          cp -r index.html css js assets _site/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  # ---------------------------------------------------------------- CD
+  deploy:
+    name: Deploy to GitHub Pages
+    # deploy only on real pushes to main, never on pull requests
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

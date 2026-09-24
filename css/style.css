@@ -918,6 +918,98 @@ a.meta-item:hover { border-color: var(--border-hi); color: var(--blue-2); transf
 .footer-links a:hover { color: var(--blue-2); }
 .footer-copy { text-align: right; font-size: 13px; color: var(--muted-2); }
 
+/* ----------------------------------------------- Featured 2: Telehealth */
+.featured + .featured { margin-top: 28px; }
+.featured--flip { grid-template-columns: 440px 1fr; }
+.featured--flip .featured-flow { border-left: 0; border-right: 1px solid var(--border-soft); }
+.featured-title--md { font-size: 40px; line-height: 1.08; }
+.built-list { margin-top: 26px; display: flex; flex-direction: column; gap: 10px; }
+.built-list li { position: relative; padding-left: 20px; font-size: 14.5px; line-height: 1.65; color: var(--muted); }
+.built-list li::before { content: ""; position: absolute; left: 0; top: 9px; width: 7px; height: 7px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 8px var(--blue); }
+.built-list strong { color: var(--text); font-weight: 600; }
+.mini-flow { display: flex; flex-direction: column; gap: 8px; counter-reset: step; }
+.mini-flow li { position: relative; padding-left: 34px; font-size: 14px; color: var(--muted); line-height: 1.5; counter-increment: step; }
+.mini-flow li::before { content: counter(step, decimal-leading-zero); position: absolute; left: 0; top: 0; font-family: var(--font-head); font-size: 11px; font-weight: 700; color: var(--blue-2); padding: 2px 6px; border-radius: 6px; border: 1px solid var(--border); }
+.mini-flow li:not(:last-child)::after { content: ""; position: absolute; left: 12px; top: 24px; height: 8px; width: 1px; background: rgba(0,168,255,0.35); }
+
+/* Integration map */
+.imap-panel { display: flex; flex-direction: column; }
+.imap { position: relative; flex: 0 0 auto; height: 540px; margin: auto 0; }
+.imap-lines { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.imap-lines line {
+  stroke: rgba(0,168,255,0.28);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 4 6;
+  animation: imap-dash 3s linear infinite;
+}
+.imap-lines line:nth-child(even) { animation-duration: 3.8s; }
+@keyframes imap-dash { to { stroke-dashoffset: -40; } }
+.imap-core {
+  /* centred with margins (not translate) so the pulse animation's transform doesn't shift it */
+  position: absolute; left: 50%; top: 50%;
+  margin: -52px 0 0 -52px;
+  width: 104px; height: 104px;
+  border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: radial-gradient(circle at 40% 35%, rgba(0,168,255,0.55), rgba(13,71,161,0.85));
+  border: 1px solid rgba(76,195,255,0.7);
+  box-shadow: 0 0 0 10px rgba(0,168,255,0.08), 0 0 50px -6px var(--glow);
+  animation: halo-pulse 6s ease-in-out infinite;
+  z-index: 2;
+}
+.imap-core-k { font-family: var(--font-head); font-size: 20px; font-weight: 700; color: #fff; line-height: 1; }
+.imap-core-v { margin-top: 5px; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.8); }
+.imap-node {
+  position: absolute;
+  z-index: 2;
+  display: flex; flex-direction: column; gap: 2px;
+  padding: 9px 12px;
+  border-radius: 12px;
+  background: rgba(5,10,20,0.9);
+  border: 1px solid var(--border);
+  box-shadow: 0 0 20px -8px var(--glow);
+  transition: border-color var(--t), transform var(--t), box-shadow var(--t);
+  max-width: 128px;
+}
+.imap-node:hover { border-color: var(--blue); transform: translateY(-3px); box-shadow: 0 0 26px -6px var(--glow); }
+.imap-node strong { font-family: var(--font-head); font-size: 12.5px; font-weight: 600; color: var(--text); line-height: 1.2; }
+.imap-node small { font-size: 10.5px; color: var(--muted); line-height: 1.35; }
+.imap-node--1 { top: 4%; left: 4%; }
+.imap-node--2 { top: 4%; right: 4%; text-align: right; align-items: flex-end; }
+.imap-node--3 { top: 25%; right: 0; text-align: right; align-items: flex-end; }
+.imap-node--4 { top: 63%; right: 0; text-align: right; align-items: flex-end; }
+.imap-node--5 { bottom: 4%; right: 4%; text-align: right; align-items: flex-end; }
+.imap-node--6 { bottom: 4%; left: 4%; }
+.imap-node--7 { top: 63%; left: 0; }
+.imap-node--8 { top: 25%; left: 0; }
+
+/* Compact project row + GitHub bar */
+.project-grid--compact { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.project-grid--compact .pcard-visual { height: 110px; padding: 12px 22px; }
+.project-grid--compact .pcard-body { padding: 20px 20px 24px; }
+.project-grid--compact .pcard-title { font-size: 16px; }
+.project-grid--compact .pcard-desc { font-size: 13.5px; margin-top: 10px; }
+.project-grid--compact .chips { margin-top: 16px; }
+.project-grid--compact .chips span { font-size: 11px; padding: 4px 9px; }
+.gh-bar {
+  display: flex; align-items: center; gap: 18px;
+  margin-top: 20px;
+  padding: 18px 26px;
+  border-radius: 16px;
+  background: linear-gradient(120deg, rgba(0,168,255,0.14), var(--glass) 55%);
+  border-color: var(--border-hi);
+}
+.gh-bar:hover { transform: translateY(-3px); }
+.gh-bar-icon { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; color: var(--blue-2); background: rgba(0,168,255,0.12); border: 1px solid var(--border-hi); flex: 0 0 auto; }
+.gh-bar-icon svg { width: 22px; height: 22px; }
+.gh-bar-text { display: flex; flex-direction: column; gap: 2px; flex: 1; }
+.gh-bar-text strong { font-family: var(--font-head); font-size: 16px; font-weight: 600; color: var(--text); }
+.gh-bar-text small { font-size: 12.5px; color: var(--muted); }
+.gh-bar-link { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-head); font-size: 13.5px; font-weight: 600; color: var(--blue-2); }
+.gh-bar-link svg { width: 18px; height: 18px; transition: transform var(--t); }
+.gh-bar:hover .gh-bar-link svg { transform: translateX(6px); }
+
 /* ---------------------------------------------------------- Scroll reveal */
 .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.9s var(--ease), transform 0.9s var(--ease); }
 .reveal.is-visible { opacity: 1; transform: none; }
@@ -949,6 +1041,8 @@ a.meta-item:hover { border-color: var(--border-hi); color: var(--blue-2); transf
   .photo-frame { width: 346px; height: 346px; }
   .badge--1 { left: 30px; } .badge--2 { right: 10px; } .badge--3 { right: 0; } .badge--4 { left: 70px; }
   .featured { grid-template-columns: 1fr 370px; }
+  .featured--flip { grid-template-columns: 400px 1fr; }
+  .featured-title--md { font-size: 34px; }
   .featured-main { padding: 48px 48px 44px; }
   .about-grid { gap: 60px; grid-template-columns: 410px 1fr; }
   .orbit-card { height: 430px; }

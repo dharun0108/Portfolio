@@ -332,29 +332,97 @@
           </div>
         </article>
 
-        <!-- Other projects -->
-        <div class="project-grid">
-          <article class="glass pcard reveal">
-            <div class="pcard-visual">
-              <svg viewBox="0 0 200 110" fill="none" aria-hidden="true">
-                <rect x="14" y="14" width="34" height="14" rx="3" class="v-badge"/><text x="31" y="24.5" class="v-text" text-anchor="middle">GET</text>
-                <rect x="56" y="17" width="110" height="8" rx="4" class="v-bar"/>
-                <rect x="14" y="40" width="34" height="14" rx="3" class="v-badge v-badge--alt"/><text x="31" y="50.5" class="v-text" text-anchor="middle">POST</text>
-                <rect x="56" y="43" width="86" height="8" rx="4" class="v-bar"/>
-                <rect x="14" y="66" width="34" height="14" rx="3" class="v-badge"/><text x="31" y="76.5" class="v-text" text-anchor="middle">JWT</text>
-                <rect x="56" y="69" width="128" height="8" rx="4" class="v-bar"/>
-                <circle cx="176" cy="21" r="3" class="v-dot"/><circle cx="152" cy="47" r="3" class="v-dot v-dot--red"/>
-                <path d="M14 94 H186" class="v-line"/>
+        <!-- Featured 2: Telehealth backend -->
+        <article class="glass featured featured--flip reveal">
+          <div class="featured-flow imap-panel" aria-label="Telehealth backend integration map">
+            <div class="flow-head"><span>Integration map</span><span class="flow-live"><i></i>8 systems</span></div>
+            <div class="imap">
+              <svg class="imap-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <line x1="50" y1="50" x2="24" y2="10"/>
+                <line x1="50" y1="50" x2="76" y2="10"/>
+                <line x1="50" y1="50" x2="84" y2="30"/>
+                <line x1="50" y1="50" x2="84" y2="68"/>
+                <line x1="50" y1="50" x2="78" y2="86"/>
+                <line x1="50" y1="50" x2="22" y2="86"/>
+                <line x1="50" y1="50" x2="16" y2="68"/>
+                <line x1="50" y1="50" x2="16" y2="30"/>
               </svg>
+              <div class="imap-core">
+                <span class="imap-core-k">.NET 8</span>
+                <span class="imap-core-v">Web API</span>
+              </div>
+              <div class="imap-node imap-node--1"><strong>Kno2</strong><small>TEFCA · Carequality · Direct · Fax</small></div>
+              <div class="imap-node imap-node--2"><strong>Epic FHIR</strong><small>Hospital records</small></div>
+              <div class="imap-node imap-node--3"><strong>Video Visits</strong><small>Booking · Payments</small></div>
+              <div class="imap-node imap-node--4"><strong>In-app Chat</strong><small>Patient ↔ Doctor</small></div>
+              <div class="imap-node imap-node--5"><strong>AI</strong><small>Transcription · SOAP notes</small></div>
+              <div class="imap-node imap-node--6"><strong>Wearables</strong><small>Fitbit · HealthKit · Garmin · Google Fit</small></div>
+              <div class="imap-node imap-node--7"><strong>MongoDB</strong><small>Cosmos DB</small></div>
+              <div class="imap-node imap-node--8"><strong>Redis · Blob</strong><small>Hangfire jobs</small></div>
             </div>
-            <div class="pcard-body">
-              <p class="pcard-cat">Healthcare · Telehealth</p>
-              <h3 class="pcard-title">.NET 8 Telehealth Backend</h3>
-              <p class="pcard-desc">REST API backend consolidating scattered hospital records into one unified health record — JWT auth, patient onboarding, consent management, Kno2 / Epic FHIR aggregation and wearable data.</p>
-              <div class="chips"><span>.NET 8</span><span>Web API</span><span>MongoDB</span><span>Redis</span><span>Hangfire</span><span>C-CDA / FHIR</span></div>
-            </div>
-          </article>
+          </div>
 
+          <div class="featured-main">
+            <div class="featured-label">
+              <span class="pill">Featured</span>
+              <span class="featured-cat">Healthcare · Telehealth Platform</span>
+            </div>
+            <h3 class="featured-title featured-title--md">.NET 8 Telehealth Backend</h3>
+            <p class="featured-subtitle">Unified Health Record &amp; Telehealth Platform API</p>
+            <p class="featured-desc">A .NET 8 REST API backend powering a telehealth platform that consolidates a patient's scattered hospital records into one unified health record, and runs the full care workflow — onboarding, record aggregation, secure messaging, video visits, in-app chat and wearable vitals — with AI clinical support.</p>
+
+            <div class="featured-stats">
+              <div class="fstat"><span class="fstat-num">~27</span><span class="fstat-label">Clinical Sections parsed</span></div>
+              <div class="fstat"><span class="fstat-num">4</span><span class="fstat-label">Wearable Sources</span></div>
+              <div class="fstat"><span class="fstat-num">2</span><span class="fstat-label">Health Networks</span></div>
+            </div>
+
+            <ul class="built-list">
+              <li><strong>Authentication &amp; access</strong> — JWT auth with role-based access and per-device refresh tokens</li>
+              <li><strong>Patient onboarding</strong> — multi-step onboarding with HIPAA consent management</li>
+              <li><strong>Record aggregation</strong> — Kno2 (TEFCA / Carequality) and Epic FHIR retrieval with identity verification, C-CDA / FHIR parsing into one longitudinal medical record</li>
+              <li><strong>Secure communication</strong> — patient–doctor in-app chat, plus Kno2 Direct Secure Messaging &amp; fax with delivery auditing and read receipts</li>
+              <li><strong>Telehealth visits</strong> — video visits with booking, availability, per-visit &amp; subscription payments, live transcription and AI-generated SOAP notes</li>
+              <li><strong>Wearable vitals</strong> — Fitbit, Apple HealthKit, Garmin and Google Fit integrations run as Hangfire background jobs</li>
+            </ul>
+
+            <div class="chips chips--tech"><span>.NET 8</span><span>C#</span><span>ASP.NET Web API</span><span>MongoDB (Cosmos DB)</span><span>Redis</span><span>Azure Blob Storage</span><span>Hangfire</span><span>JWT</span></div>
+            <div class="featured-terms">
+              <span class="terms-k">Standards</span>
+              <div class="chips chips--blue"><span>C-CDA</span><span>FHIR</span><span>HIPAA</span></div>
+            </div>
+
+            <button class="btn btn-outline btn-sm featured-toggle" type="button" aria-expanded="false" aria-controls="featured-details-2">
+              <span class="label-more">Explore the integrations</span><span class="label-less">Show less</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+
+          <div class="featured-details" id="featured-details-2">
+            <div class="featured-details-inner">
+              <div class="detail-col">
+                <h4>Record aggregation</h4>
+                <ol class="mini-flow">
+                  <li>Kno2 / Epic FHIR discovery</li>
+                  <li>Identity verification</li>
+                  <li>C-CDA / FHIR parsing (~27 sections)</li>
+                  <li>Longitudinal medical record</li>
+                </ol>
+              </div>
+              <div class="detail-col">
+                <h4>Communication</h4>
+                <div class="chips"><span>In-app chat</span><span>Direct Secure Messaging</span><span>Kno2 fax</span><span>Delivery auditing</span><span>Read receipts</span></div>
+              </div>
+              <div class="detail-col">
+                <h4>Telehealth</h4>
+                <div class="chips"><span>Video visits</span><span>Booking</span><span>Doctor availability</span><span>Per-visit payments</span><span>Subscriptions</span><span>Live transcription</span><span>AI SOAP notes</span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Other projects -->
+        <div class="project-grid project-grid--compact">
           <article class="glass pcard reveal">
             <div class="pcard-visual">
               <svg viewBox="0 0 200 110" fill="none" aria-hidden="true">
@@ -367,8 +435,8 @@
             <div class="pcard-body">
               <p class="pcard-cat">Enterprise · ERP</p>
               <h3 class="pcard-title">ICS / Roomer</h3>
-              <p class="pcard-desc">ERP / inventory management platform covering inventory operations end to end, with IoT connectivity over RFID tags to identify product ownership, track stock movement and monitor quantities in real time.</p>
-              <div class="chips"><span>ASP.NET Core</span><span>C#</span><span>SQL Server</span><span>IoT / RFID</span><span>jQuery</span></div>
+              <p class="pcard-desc">ERP inventory platform with IoT/RFID connectivity for product ownership, stock movement and real-time quantity tracking.</p>
+              <div class="chips"><span>ASP.NET Core</span><span>C#</span><span>SQL Server</span><span>IoT / RFID</span></div>
             </div>
           </article>
 
@@ -382,10 +450,10 @@
               </svg>
             </div>
             <div class="pcard-body">
-              <p class="pcard-cat">Enterprise · Scantron</p>
+              <p class="pcard-cat">Enterprise</p>
               <h3 class="pcard-title">Scantron — License Provisioning &amp; Document Auditing</h3>
-              <p class="pcard-desc">License-provisioning web app generating scanner product keys from organization-provided DLLs with expiry and usage tracking, plus a Price Book auditing tool for securely managing organizational asset documents.</p>
-              <div class="chips"><span>ASP.NET MVC</span><span>C#</span><span>Entity Framework</span><span>SQL Server</span><span>DLL key generation</span></div>
+              <p class="pcard-desc">License-provisioning app generating scanner product keys from organization DLLs with expiry tracking, plus a Price Book document-auditing tool.</p>
+              <div class="chips"><span>ASP.NET MVC</span><span>C#</span><span>EF Core</span><span>SQL Server</span></div>
             </div>
           </article>
 
@@ -403,8 +471,8 @@
             <div class="pcard-body">
               <p class="pcard-cat">Data · Reporting</p>
               <h3 class="pcard-title">Survey Data Management</h3>
-              <p class="pcard-desc">Microsoft Access databases and reporting for institutions including New York University, Union College, Blues Health and the National Association of School Psychologists — turning raw survey data into clean, human-readable reports.</p>
-              <div class="chips"><span>Microsoft Access</span><span>C#</span><span>ADO.NET</span><span>Reporting</span></div>
+              <p class="pcard-desc">Microsoft Access databases and reporting for NYU, Union College, Blues Health and NASP — raw survey data into clean reports.</p>
+              <div class="chips"><span>Microsoft Access</span><span>C#</span><span>ADO.NET</span></div>
             </div>
           </article>
 
@@ -419,24 +487,21 @@
               </svg>
             </div>
             <div class="pcard-body">
-              <p class="pcard-cat">Automation · Desktop</p>
+              <p class="pcard-cat">Automation</p>
               <h3 class="pcard-title">Windows &amp; Console Automation Tools</h3>
-              <p class="pcard-desc">Multiple Windows and console applications built to automate recurring manual processes through console-based builds.</p>
-              <div class="chips"><span>C#</span><span>Windows Forms</span><span>Console Apps</span><span>.NET</span></div>
+              <p class="pcard-desc">Windows and console applications automating recurring manual processes through console-based builds.</p>
+              <div class="chips"><span>C#</span><span>Windows Forms</span><span>Console Apps</span></div>
             </div>
           </article>
-
-          <a href="https://github.com/dharun0108" target="_blank" rel="noopener" class="glass pcard pcard--cta reveal">
-            <div class="pcard-cta-inner">
-              <span class="pcard-cta-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg></span>
-              <span class="pcard-cta-kicker">More work</span>
-              <span class="pcard-cta-title">See more on GitHub</span>
-              <span class="pcard-cta-link">github.com/dharun0108
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </span>
-            </div>
-          </a>
         </div>
+
+        <a href="https://github.com/dharun0108" target="_blank" rel="noopener" class="glass gh-bar reveal">
+          <span class="gh-bar-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg></span>
+          <span class="gh-bar-text"><strong>See more on GitHub</strong><small>More repositories, experiments and practice projects</small></span>
+          <span class="gh-bar-link">github.com/dharun0108
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </a>
       </div>
     </section>
 
