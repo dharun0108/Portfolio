@@ -22,16 +22,23 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="#intro" class="brand">Dharun<span>&lt;/&gt;</span></a>
-      <nav class="nav" aria-label="Chapters">
+      <nav class="nav" id="site-nav" aria-label="Chapters">
         <a href="#engineer" class="nav-link" data-nav="engineer"><span class="nav-idx">02</span>Engineer</a>
         <a href="#journey" class="nav-link" data-nav="journey"><span class="nav-idx">03</span>Journey</a>
         <a href="#craft" class="nav-link" data-nav="craft"><span class="nav-idx">04</span>Craft</a>
         <a href="#work" class="nav-link" data-nav="work"><span class="nav-idx">05</span>Work</a>
         <a href="#impact" class="nav-link" data-nav="impact"><span class="nav-idx">06</span>Impact</a>
         <a href="#contact" class="nav-link" data-nav="contact"><span class="nav-idx">07</span>Contact</a>
+        <a href="assets/Dharun_S_Resume.pdf" class="btn btn-outline nav-resume" download="Dharun_S_Resume.pdf">Download Resume <span aria-hidden="true">↓</span></a>
       </nav>
-      <a href="assets/Dharun_S_Resume.pdf" class="header-cta" download="Dharun_S_Resume.pdf">Resume <span aria-hidden="true">↓</span></a>
+      <div class="header-actions">
+        <a href="assets/Dharun_S_Resume.pdf" class="header-cta" download="Dharun_S_Resume.pdf">Resume <span aria-hidden="true">↓</span></a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+        </button>
+      </div>
     </div>
+    <div class="nav-backdrop" hidden></div>
   </header>
 
   <main id="main">

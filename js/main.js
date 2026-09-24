@@ -26,6 +26,33 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   window.addEventListener("resize", onScroll);
 
+  /* ------------------------------------------------ Mobile navigation (hamburger) */
+  const navToggle = document.querySelector(".nav-toggle");
+  const siteNav = document.getElementById("site-nav");
+  const backdrop = document.querySelector(".nav-backdrop");
+  if (navToggle && siteNav) {
+    const setMenu = (open) => {
+      document.body.classList.toggle("nav-open", open);
+      navToggle.setAttribute("aria-expanded", String(open));
+      navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      if (backdrop) backdrop.hidden = !open;
+      if (open) {
+        const first = siteNav.querySelector("a");
+        if (first) first.focus({ preventScroll: true });
+      }
+    };
+    const isOpen = () => document.body.classList.contains("nav-open");
+    navToggle.addEventListener("click", () => setMenu(!isOpen()));
+    siteNav.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => { if (isOpen()) setMenu(false); }));
+    if (backdrop) backdrop.addEventListener("click", () => setMenu(false));
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "Escape" && isOpen()) { setMenu(false); navToggle.focus(); }
+    });
+    // if the viewport grows back to desktop while open, reset
+    const mq = window.matchMedia("(min-width: 1024px)");
+    mq.addEventListener ? mq.addEventListener("change", (e) => { if (e.matches && isOpen()) setMenu(false); }) : null;
+  }
+
   /* ------------------------------------------------ Restrained scroll reveal (chapter-level only) */
   const revealEls = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && !reduceMotion) {
