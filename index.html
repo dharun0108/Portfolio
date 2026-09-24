@@ -4,589 +4,637 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dharun S — Full Stack .NET Developer</title>
-  <meta name="description" content="Portfolio of Dharun S, Full Stack .NET Developer building scalable enterprise applications, healthcare interoperability platforms, REST APIs and Azure cloud solutions." />
+  <meta name="description" content="Dharun S builds the systems behind meaningful digital experiences: enterprise .NET backends, Azure cloud applications and healthcare interoperability platforms including the TeleMEDIx clinical data normalization engine." />
+  <meta property="og:title" content="Dharun S — Full Stack .NET Developer" />
+  <meta property="og:description" content="Enterprise .NET, Azure and healthcare interoperability. Featured work: TeleMEDIx clinical data normalization engine." />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/profile.jpg" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div class="bg-grid" aria-hidden="true"></div>
-  <div class="bg-glow bg-glow--hero" aria-hidden="true"></div>
-  <div class="bg-glow bg-glow--red" aria-hidden="true"></div>
+  <a class="skip-link" href="#intro">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
 
   <!-- ============================================================ HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#home" class="brand">Dharun<span>&lt;/&gt;</span></a>
-      <nav class="nav" aria-label="Primary">
-        <a href="#home" class="nav-link is-active" data-nav="home">Home</a>
-        <a href="#about" class="nav-link" data-nav="about">About</a>
-        <a href="#experience" class="nav-link" data-nav="experience">Experience</a>
-        <a href="#skills" class="nav-link" data-nav="skills">Skills</a>
-        <a href="#projects" class="nav-link" data-nav="projects">Projects</a>
-        <a href="#contact" class="nav-link" data-nav="contact">Contact</a>
+      <a href="#intro" class="brand">Dharun<span>&lt;/&gt;</span></a>
+      <nav class="nav" aria-label="Chapters">
+        <a href="#engineer" class="nav-link" data-nav="engineer"><span class="nav-idx">02</span>Engineer</a>
+        <a href="#journey" class="nav-link" data-nav="journey"><span class="nav-idx">03</span>Journey</a>
+        <a href="#craft" class="nav-link" data-nav="craft"><span class="nav-idx">04</span>Craft</a>
+        <a href="#work" class="nav-link" data-nav="work"><span class="nav-idx">05</span>Work</a>
+        <a href="#impact" class="nav-link" data-nav="impact"><span class="nav-idx">06</span>Impact</a>
+        <a href="#contact" class="nav-link" data-nav="contact"><span class="nav-idx">07</span>Contact</a>
       </nav>
+      <a href="assets/Dharun_S_Resume.pdf" class="header-cta" download="Dharun_S_Resume.pdf">Resume <span aria-hidden="true">↓</span></a>
     </div>
   </header>
 
-  <main>
-    <!-- ============================================================ HERO -->
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <h1 class="hero-name anim-up" style="--d:0">Hi, I’m Dharun</h1>
-          <p class="hero-role anim-up" style="--d:1">Full Stack .NET Developer</p>
-          <p class="hero-lead anim-up" style="--d:2">Building scalable enterprise applications, healthcare platforms, REST APIs and cloud-based solutions.</p>
-          <p class="hero-sub anim-up" style="--d:3">Focused on .NET, Azure, healthcare interoperability and real-world backend engineering.</p>
-          <div class="hero-actions anim-up" style="--d:4">
-            <a href="assets/Dharun_S_Resume.pdf" class="btn btn-primary" download="Dharun_S_Resume.pdf">
-              Download Resume
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
-            </a>
-            <a href="#projects" class="btn btn-outline">View My Work</a>
-          </div>
-          <div class="socials anim-up" style="--d:5">
-            <a href="https://github.com/dharun0108" class="social" target="_blank" rel="noopener" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
-            </a>
-            <a href="https://linkedin.com/in/dharunsubramani01" class="social" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 20.4h-3.5v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2 2 0 1 1 0-4.1 2 2 0 0 1 0 4.1zM7.1 20.4H3.6V9h3.5v11.4zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.5c0 1 .8 1.8 1.8 1.8h20.4c1 0 1.8-.8 1.8-1.8V1.7c0-1-.8-1.7-1.8-1.7z"/></svg>
-            </a>
-            <a href="mailto:dharun0108@gmail.com" class="social" aria-label="Email">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            </a>
+  <main id="main">
+
+    <!-- ============================================================ 01 INTRO -->
+    <section class="chapter intro" id="intro" data-chapter="intro">
+      <div class="container intro-grid">
+        <div class="intro-copy">
+          <p class="chapter-tag reveal-line"><span>Chapter 01</span><i></i><span>Introduction</span></p>
+          <h1 class="intro-title">
+            <span class="line"><span class="line-inner">Hi, I’m Dharun.</span></span>
+            <span class="line"><span class="line-inner">I build the systems behind</span></span>
+            <span class="line"><span class="line-inner"><em>meaningful</em> digital experiences.</span></span>
+          </h1>
+          <p class="intro-role reveal-up" style="--d:4"><span class="mono">Full Stack .NET Developer</span><span class="dot-sep"></span><span class="mono muted">Erode, Tamil Nadu, India</span></p>
+          <p class="intro-lead reveal-up" style="--d:5">Three years of building enterprise applications, REST APIs and cloud systems on the Microsoft stack — most recently a clinical data normalization engine and a .NET 8 telehealth backend that pull fragmented medical records into one coherent patient story.</p>
+          <div class="intro-actions reveal-up" style="--d:6">
+            <a href="#work" class="btn btn-primary">View Selected Work</a>
+            <a href="assets/Dharun_S_Resume.pdf" class="btn btn-text" download="Dharun_S_Resume.pdf">Download Resume <span aria-hidden="true">↓</span></a>
           </div>
         </div>
 
-        <div class="hero-visual anim-fade">
-          <div class="halo"></div>
-          <div class="orbit orbit--outer"></div>
-          <div class="orbit orbit--inner"></div>
-          <span class="red-spark red-spark--1"></span>
-          <span class="red-spark red-spark--2"></span>
+        <figure class="intro-figure reveal-figure">
+          <div class="figure-frame">
+            <img src="assets/profile.jpg" alt="Black-and-white portrait of Dharun S" class="figure-img" width="1000" height="1000" fetchpriority="high" />
+            <span class="figure-rule figure-rule--v" aria-hidden="true"></span>
+            <span class="figure-rule figure-rule--h" aria-hidden="true"></span>
+            <span class="figure-mark" aria-hidden="true"></span>
+          </div>
+          <figcaption class="figure-caption mono">
+            <span>Fig. 01</span><span>Dharun S · 2026</span>
+          </figcaption>
+        </figure>
+      </div>
 
-          <div class="photo-frame">
-            <img src="assets/profile.jpg" alt="Dharun S" class="photo" width="1000" height="1000" />
+      <div class="container intro-foot reveal-up" style="--d:7">
+        <div class="foot-item"><span class="mono muted">Currently</span><span>Full Stack .NET Developer, App Innovation Technologies</span></div>
+        <div class="foot-item"><span class="mono muted">Since</span><span>November 2023</span></div>
+        <div class="foot-item"><span class="mono muted">Focus</span><span>.NET · Azure · Healthcare interoperability</span></div>
+        <a href="#engineer" class="foot-scroll mono" aria-label="Scroll to the next chapter">Scroll <span class="scroll-line" aria-hidden="true"></span></a>
+      </div>
+    </section>
+
+    <!-- ============================================================ 02 ENGINEER -->
+    <section class="chapter engineer" id="engineer" data-chapter="engineer">
+      <div class="container">
+        <p class="chapter-tag reveal"><span>Chapter 02</span><i></i><span>The Engineer</span></p>
+        <div class="engineer-grid">
+          <div class="engineer-narrative">
+            <h2 class="chapter-title reveal">What I do, and how I think about it.</h2>
+            <p class="lede reveal">I own features end to end — from database design and business logic through API integration, front-end implementation and Azure deployment. Most of my work sits where enterprise software meets messy real-world data: ERP inventory with RFID tracking, software licensing platforms, and healthcare systems that have to agree on what a medication or a lab result actually means.</p>
+            <p class="body reveal">I care about systems that stay legible as they grow: clear contracts between services, background jobs for the slow work, caches where they earn their place, and provenance on every record so that a result can always be traced back to its source.</p>
           </div>
 
-          <div class="badge badge--1"><span class="badge-mark">.NET</span></div>
-          <div class="badge badge--2"><span class="badge-mark">C#</span></div>
-          <div class="badge badge--3"><span class="badge-mark">Azure</span></div>
-          <div class="badge badge--4"><span class="badge-mark">MongoDB</span></div>
+          <ol class="areas">
+            <li class="area reveal" data-area="backend">
+              <span class="area-idx mono">01</span>
+              <div class="area-body">
+                <h3>Backend Engineering</h3>
+                <p>REST APIs and web applications on ASP.NET Core — MVC, Web API and Minimal API — with LINQ, Entity Framework Core and ADO.NET for data access, JWT authentication and role-based access.</p>
+                <p class="mono area-stack">C# · .NET 8 · ASP.NET Core · Minimal API · EF Core</p>
+              </div>
+              <span class="area-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l-4 3 4 3"/><path d="M16 9l4 3-4 3"/><path d="M13.5 6l-3 12"/></svg></span>
+            </li>
+            <li class="area reveal" data-area="cloud">
+              <span class="area-idx mono">02</span>
+              <div class="area-body">
+                <h3>Cloud &amp; Data Systems</h3>
+                <p>Data access across MongoDB, Azure Cosmos DB and SQL Server, Redis and Blob Storage for caching and documents, Hangfire for long-running workloads, and deployment to Microsoft Azure through to production.</p>
+                <p class="mono area-stack">Azure · Cosmos DB · MongoDB · Redis · Blob Storage · Hangfire</p>
+              </div>
+              <span class="area-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 8.5a4 4 0 0 1 0 9.5H7z"/></svg></span>
+            </li>
+            <li class="area reveal" data-area="health">
+              <span class="area-idx mono">03</span>
+              <div class="area-body">
+                <h3>Healthcare Interoperability</h3>
+                <p>Retrieving records across hospitals through Kno2 and Epic FHIR, parsing C-CDA and FHIR documents, and normalizing clinical data against LOINC, SNOMED CT, ICD-10, RxNorm and CPT under HIPAA-aligned handling.</p>
+                <p class="mono area-stack">FHIR · C-CDA · Kno2 · Epic FHIR · TEFCA · Carequality</p>
+              </div>
+              <span class="area-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 3 10 2.5-6 1.5 3H21"/></svg></span>
+            </li>
+          </ol>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================ TECH STRIP -->
-    <div class="tech-strip" aria-label="Core technologies">
+    <!-- ============================================================ 03 JOURNEY -->
+    <section class="chapter journey" id="journey" data-chapter="journey">
       <div class="container">
-        <ul class="tech-list">
-          <li>C#</li><li>.NET 8</li><li>ASP.NET Core</li><li>Web API</li><li>Minimal API</li><li>Azure</li>
-          <li>MongoDB</li><li>SQL Server</li><li>FHIR</li><li>C-CDA</li><li>Redis</li><li>Git</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- ============================================================ ABOUT -->
-    <section class="section about" id="about">
-      <div class="glow glow--about" aria-hidden="true"></div>
-      <div class="container">
-        <h2 class="section-title reveal">About Me</h2>
-
-        <div class="about-grid">
-          <div class="about-visual reveal">
-            <div class="orbit-card">
-              <div class="orbit-rings">
-                <span class="ring ring--1"></span>
-                <span class="ring ring--2"></span>
-                <span class="ring ring--3"></span>
-              </div>
-              <div class="orbit-core">
-                <span class="orbit-core-label">.NET</span>
-                <span class="orbit-core-sub">Backend Core</span>
-              </div>
-              <span class="node node--1">Azure</span>
-              <span class="node node--2">MongoDB</span>
-              <span class="node node--3">FHIR</span>
-              <span class="node node--4">SQL Server</span>
-              <span class="node node--5">Redis</span>
-              <span class="node node--6">C-CDA</span>
-              <span class="node-dot node-dot--red"></span>
-              <div class="orbit-caption">
-                <span class="orbit-caption-k">Stack focus</span>
-                <span class="orbit-caption-v">.NET · Azure · Healthcare Interoperability</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="about-content">
-            <h3 class="about-name reveal">I’m Dharun</h3>
-            <p class="about-text reveal">I’m a Full Stack .NET Developer with 3+ years of hands-on experience designing, developing and deploying enterprise applications, RESTful APIs, healthcare interoperability systems and cloud-based solutions.</p>
-            <p class="about-text reveal">I work across the complete application lifecycle — from database design and backend development to API integration, frontend implementation and Azure deployment.</p>
-
-            <div class="cap-list">
-              <div class="cap-card reveal">
-                <span class="cap-idx">01</span>
-                <span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l-4 3 4 3"/><path d="M16 9l4 3-4 3"/><path d="M13.5 6l-3 12"/></svg></span>
-                <span class="cap-body"><strong>Backend Development</strong><small>C# / .NET / ASP.NET Core / Web API / Minimal API</small></span>
-              </div>
-              <div class="cap-card reveal">
-                <span class="cap-idx">02</span>
-                <span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 8.5a4 4 0 0 1 0 9.5H7z"/></svg></span>
-                <span class="cap-body"><strong>Cloud &amp; Data Engineering</strong><small>Azure / MongoDB / Cosmos DB / Redis / Blob Storage</small></span>
-              </div>
-              <div class="cap-card reveal">
-                <span class="cap-idx">03</span>
-                <span class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 3 10 2.5-6 1.5 3H21"/></svg></span>
-                <span class="cap-body"><strong>Healthcare Interoperability</strong><small>FHIR / C-CDA / Epic FHIR / Kno2 / Clinical Data Normalization</small></span>
-              </div>
-            </div>
-          </div>
+        <p class="chapter-tag reveal"><span>Chapter 03</span><i></i><span>The Journey</span></p>
+        <div class="journey-head">
+          <h2 class="chapter-title reveal">From styling ERP pages to normalizing medical records.</h2>
+          <p class="lede reveal">A short, steep path: a web development internship in 2023, then a full-stack role where the problems moved from inventory and licensing into telehealth and clinical data.</p>
         </div>
 
-        <div class="metrics reveal">
-          <div class="metric">
-            <div class="metric-value"><span class="count" data-count="3">0</span><span class="metric-suffix">+</span></div>
-            <p class="metric-label">Years Experience</p>
-          </div>
-          <div class="metric">
-            <div class="metric-value"><span class="count" data-count="25">0</span><span class="metric-suffix">+</span></div>
-            <p class="metric-label">Clinical Sections</p>
-          </div>
-          <div class="metric">
-            <div class="metric-value"><span class="count" data-count="15">0</span></div>
-            <p class="metric-label">Clinical Risk Scores</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================ EXPERIENCE -->
-    <section class="section experience" id="experience">
-      <div class="container">
-        <h2 class="section-title reveal">Professional Experience</h2>
-
-        <div class="timeline">
-          <article class="tl-item reveal">
-            <div class="tl-side">
-              <span class="tl-range">Nov 2023 — Present</span>
-              <span class="tl-badge">Current</span>
+        <ol class="timeline">
+          <li class="tl tl--current reveal">
+            <div class="tl-when">
+              <span class="mono">Nov 2023 — Present</span>
+              <span class="tl-now mono">Current role</span>
             </div>
-            <div class="tl-node tl-node--current"></div>
-            <div class="glass tl-card">
+            <div class="tl-node" aria-hidden="true"></div>
+            <div class="tl-what">
               <h3>Full Stack .NET Developer</h3>
-              <p class="tl-company">App Innovation Technologies Pvt Ltd</p>
-              <ul class="tl-points">
-                <li>Built <strong>TeleMEDIx</strong>, a clinical data normalization engine on ASP.NET Minimal API that turns raw medical records into fully-coded patient snapshots across ~25 clinical sections and computes 15 clinical risk scores.</li>
-                <li>Contributed to a <strong>.NET 8 REST API backend</strong> for a telehealth platform, aggregating patient records from external hospitals via <strong>Kno2</strong> and <strong>Epic FHIR</strong> into one longitudinal medical record and parsing <strong>C-CDA / FHIR</strong> documents with JWT auth and role-based access.</li>
-                <li>Designed and maintained data access across <strong>MongoDB</strong>, <strong>Azure Cosmos DB</strong> and Microsoft Access, using <strong>Redis</strong> and <strong>Azure Blob Storage</strong> for caching and document storage, with long-running work as <strong>Hangfire</strong> background jobs.</li>
-                <li>Integrated <strong>wearable devices</strong> (Fitbit, Apple HealthKit, Garmin, Google Fit) for continuous patient vitals and built secure document exchange over Kno2 fax and Direct Secure Messaging.</li>
-                <li>Delivered an <strong>ERP inventory platform</strong> (ICS / Roomer) with IoT/RFID tracking, a <strong>license-provisioning</strong> application and a <strong>document-auditing</strong> tool for Scantron, deployed and hosted on <strong>Microsoft Azure</strong> through to production.</li>
+              <p class="tl-org">App Innovation Technologies Pvt Ltd</p>
+              <p class="tl-text">Enterprise and healthcare software, owned from database design to Azure deployment, working directly with client stakeholders under Agile/Scrum. The work within this role, as it appears on my resume:</p>
+              <ul class="tl-threads">
+                <li><strong>ICS / Roomer</strong> — ERP inventory platform with IoT/RFID for real-time product identification and stock tracking.</li>
+                <li><strong>Scantron</strong> — license-provisioning web app generating product keys from organization DLLs, and the Price Book document-auditing tool.</li>
+                <li><strong>Survey data</strong> — Microsoft Access datasets for institutions including New York University and Union College turned into clean reports.</li>
+                <li><strong>.NET 8 telehealth backend</strong> — records aggregated from external hospitals via Kno2 and Epic FHIR into one longitudinal medical record.</li>
+                <li><strong>TeleMEDIx</strong> — clinical data normalization engine across ~25 clinical sections with 15 clinical risk scores.</li>
               </ul>
-              <div class="chips">
-                <span>.NET 8</span><span>ASP.NET Core</span><span>Minimal API</span><span>C-CDA</span><span>FHIR</span><span>Kno2</span><span>Epic FHIR</span><span>MongoDB</span><span>Cosmos DB</span><span>Blob Storage</span><span>Redis</span><span>Hangfire</span><span>Azure</span>
-              </div>
             </div>
-          </article>
+          </li>
 
-          <article class="tl-item reveal">
-            <div class="tl-side">
-              <span class="tl-range">Aug 2023 — Oct 2023</span>
-              <span class="tl-place">Salem, Tamil Nadu</span>
-            </div>
-            <div class="tl-node"></div>
-            <div class="glass tl-card">
+          <li class="tl reveal">
+            <div class="tl-when"><span class="mono">Aug — Oct 2023</span><span class="mono muted">Salem, Tamil Nadu</span></div>
+            <div class="tl-node" aria-hidden="true"></div>
+            <div class="tl-what">
               <h3>Web Developer Intern</h3>
-              <p class="tl-company">TechQuest iT Services India Pvt Ltd</p>
-              <p class="tl-desc">Built and styled web pages for ERP software and gained practical experience with frontend development and real-world project workflows.</p>
-              <div class="chips"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>ERP UI</span></div>
+              <p class="tl-org">TechQuest iT Services India Pvt Ltd</p>
+              <p class="tl-text">Built and styled web pages for ERP software — first contact with real project workflows and the front-end half of the stack.</p>
             </div>
-          </article>
-        </div>
+          </li>
 
-        <div class="edu reveal">
-          <span class="edu-label">Education</span>
-          <div class="edu-items">
-            <div class="glass edu-item"><span class="edu-year">2021</span><strong>B.Sc. Computer Science</strong><small>Nandha Arts and Science College · Bharathiar University</small></div>
-            <div class="glass edu-item"><span class="edu-year">2017</span><strong>Higher Secondary</strong><small>State Board</small></div>
-            <div class="glass edu-item"><span class="edu-year">2015</span><strong>SSLC</strong><small>State Board</small></div>
-          </div>
-        </div>
+          <li class="tl tl--edu reveal">
+            <div class="tl-when"><span class="mono">2021</span></div>
+            <div class="tl-node" aria-hidden="true"></div>
+            <div class="tl-what">
+              <h3>B.Sc. Computer Science</h3>
+              <p class="tl-org">Nandha Arts and Science College · Bharathiar University</p>
+            </div>
+          </li>
+
+          <li class="tl tl--edu tl--minor reveal">
+            <div class="tl-when"><span class="mono">2017 · 2015</span></div>
+            <div class="tl-node" aria-hidden="true"></div>
+            <div class="tl-what">
+              <h3>Higher Secondary · SSLC</h3>
+              <p class="tl-org">State Board</p>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- ============================================================ SKILLS -->
-    <section class="section skills" id="skills">
-      <div class="glow glow--skills" aria-hidden="true"></div>
+    <!-- ============================================================ 04 CRAFT -->
+    <section class="chapter craft" id="craft" data-chapter="craft">
       <div class="container">
-        <h2 class="section-title reveal">My Skills</h2>
-
-        <div class="skills-grid">
-          <div class="glass skill-card reveal">
-            <div class="skill-head">
-              <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l-4 3 4 3"/><path d="M16 9l4 3-4 3"/><path d="M13.5 6l-3 12"/></svg></span>
-              <h3>Backend</h3>
-            </div>
-            <div class="chips"><span>C#</span><span>.NET</span><span>.NET 8</span><span>ASP.NET Core</span><span>ASP.NET MVC</span><span>ASP.NET Web API</span><span>ASP.NET Minimal API</span><span>LINQ</span><span>Entity Framework Core</span><span>ADO.NET</span></div>
-          </div>
-          <div class="glass skill-card reveal">
-            <div class="skill-head">
-              <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></span>
-              <h3>Frontend</h3>
-            </div>
-            <div class="chips"><span>JavaScript</span><span>jQuery</span><span>HTML5</span><span>CSS3</span></div>
-          </div>
-          <div class="glass skill-card reveal">
-            <div class="skill-head">
-              <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.66 3.58 3 8 3s8-1.34 8-3V6"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/></svg></span>
-              <h3>Database</h3>
-            </div>
-            <div class="chips"><span>SQL Server</span><span>MongoDB</span><span>Azure Cosmos DB</span><span>Microsoft Access</span><span>Redis</span></div>
-          </div>
-          <div class="glass skill-card reveal">
-            <div class="skill-head">
-              <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 8.5a4 4 0 0 1 0 9.5H7z"/></svg></span>
-              <h3>Cloud / DevOps</h3>
-            </div>
-            <div class="chips"><span>Microsoft Azure</span><span>Azure DevOps</span><span>Git</span><span>Azure Blob Storage</span><span>Hangfire</span></div>
-          </div>
-          <div class="glass skill-card skill-card--wide reveal">
-            <div class="skill-head">
-              <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 3 10 2.5-6 1.5 3H21"/></svg></span>
-              <h3>Healthcare</h3>
-            </div>
-            <div class="chips"><span>FHIR</span><span>C-CDA</span><span>Epic FHIR</span><span>Kno2</span><span>TEFCA</span><span>Carequality</span><span>LOINC</span><span>SNOMED CT</span><span>ICD-10</span><span>RxNorm</span><span>CPT</span></div>
+        <p class="chapter-tag reveal"><span>Chapter 04</span><i></i><span>The Craft</span></p>
+        <div class="craft-head reveal">
+          <h2 class="chapter-title">The technologies, organized by what they help me build.</h2>
+          <div class="craft-filter" role="group" aria-label="Highlight technologies by project">
+            <span class="mono muted">Highlight by project</span>
+            <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="filter" data-filter="telemedix" aria-pressed="false">TeleMEDIx</button>
+            <button type="button" class="filter" data-filter="telehealth" aria-pressed="false">Telehealth</button>
+            <button type="button" class="filter" data-filter="enterprise" aria-pressed="false">ERP &amp; Licensing</button>
           </div>
         </div>
+
+        <div class="craft-grid reveal" id="craft-grid">
+          <div class="craft-col">
+            <h3 class="craft-col-title"><span class="mono">A</span>Backend &amp; APIs</h3>
+            <ul class="tech-list">
+              <li data-p="telemedix telehealth enterprise">C#</li>
+              <li data-p="telemedix telehealth enterprise">.NET / .NET 8</li>
+              <li data-p="telemedix telehealth enterprise">ASP.NET Core</li>
+              <li data-p="enterprise">ASP.NET MVC</li>
+              <li data-p="telehealth">ASP.NET Web API</li>
+              <li data-p="telemedix">ASP.NET Minimal API</li>
+              <li data-p="telemedix telehealth enterprise">LINQ</li>
+              <li data-p="enterprise">Entity Framework Core</li>
+              <li data-p="enterprise">ADO.NET</li>
+              <li data-p="telehealth">JWT authentication</li>
+            </ul>
+          </div>
+          <div class="craft-col">
+            <h3 class="craft-col-title"><span class="mono">B</span>Cloud Infrastructure</h3>
+            <ul class="tech-list">
+              <li data-p="telemedix telehealth enterprise">Microsoft Azure</li>
+              <li data-p="telemedix telehealth enterprise">Azure DevOps</li>
+              <li data-p="telemedix telehealth enterprise">Git</li>
+              <li data-p="telemedix telehealth">Azure Blob Storage</li>
+              <li data-p="telehealth">Hangfire</li>
+              <li data-p="telemedix telehealth enterprise">Application hosting &amp; deployment</li>
+            </ul>
+          </div>
+          <div class="craft-col">
+            <h3 class="craft-col-title"><span class="mono">C</span>Data &amp; Persistence</h3>
+            <ul class="tech-list">
+              <li data-p="enterprise">SQL Server</li>
+              <li data-p="telemedix telehealth">MongoDB</li>
+              <li data-p="telemedix telehealth">Azure Cosmos DB</li>
+              <li data-p="telemedix telehealth">Redis</li>
+              <li data-p="enterprise">Microsoft Access</li>
+            </ul>
+          </div>
+          <div class="craft-col">
+            <h3 class="craft-col-title"><span class="mono">D</span>Healthcare Standards &amp; Integration</h3>
+            <ul class="tech-list">
+              <li data-p="telehealth">FHIR</li>
+              <li data-p="telehealth">C-CDA</li>
+              <li data-p="telehealth">Epic FHIR</li>
+              <li data-p="telehealth">Kno2 · TEFCA · Carequality</li>
+              <li data-p="telehealth">Direct Secure Messaging · Fax</li>
+              <li data-p="telemedix">LOINC · SNOMED CT · ICD-10</li>
+              <li data-p="telemedix">RxNorm · CPT</li>
+              <li data-p="telehealth">Wearables — Fitbit · HealthKit · Garmin · Google Fit</li>
+              <li data-p="telehealth telemedix">HIPAA-aligned data handling</li>
+            </ul>
+          </div>
+          <div class="craft-col">
+            <h3 class="craft-col-title"><span class="mono">E</span>Frontend &amp; Tooling</h3>
+            <ul class="tech-list">
+              <li data-p="enterprise">JavaScript</li>
+              <li data-p="enterprise">jQuery</li>
+              <li data-p="enterprise">HTML5 · CSS3</li>
+              <li data-p="enterprise">Windows Forms</li>
+              <li data-p="enterprise">Console applications</li>
+              <li data-p="enterprise">IoT / RFID integration</li>
+            </ul>
+          </div>
+        </div>
+        <p class="craft-note mono muted reveal">No proficiency percentages — every item above is something I have shipped with. Use the filter to see which stack each project drew on.</p>
       </div>
     </section>
 
-    <!-- ============================================================ PROJECTS -->
-    <section class="section projects" id="projects">
-      <div class="glow glow--projects" aria-hidden="true"></div>
+    <!-- ============================================================ 05 WORK -->
+    <section class="chapter work" id="work" data-chapter="work">
       <div class="container">
-        <h2 class="section-title reveal">My Projects</h2>
+        <p class="chapter-tag reveal"><span>Chapter 05</span><i></i><span>The Work</span></p>
+        <h2 class="chapter-title chapter-title--xl reveal">Selected work.</h2>
 
-        <!-- Featured -->
-        <article class="glass featured reveal">
-          <div class="featured-main">
-            <div class="featured-label">
-              <span class="pill">Featured</span>
-              <span class="featured-cat">Healthcare Interoperability</span>
+        <!-- Case study 01: TeleMEDIx -->
+        <article class="case case--hero reveal" id="case-telemedix">
+          <header class="case-head">
+            <div class="case-meta mono">
+              <span>Case study 01</span><i></i><span>Healthcare interoperability</span><i></i><span>App Innovation Technologies</span>
             </div>
-            <h3 class="featured-title">TeleMEDIx</h3>
-            <p class="featured-subtitle">Clinical Data Normalization Engine</p>
-            <p class="featured-desc">An end-to-end clinical data normalization engine that ingests raw longitudinal medical records and produces standardized, fully-coded patient snapshots for downstream clinical decision support.</p>
+            <h3 class="case-title">TeleMEDIx</h3>
+            <p class="case-sub">A clinical data normalization engine that turns raw longitudinal medical records into standardized, fully-coded patient snapshots for clinical decision support.</p>
+          </header>
 
-            <div class="featured-stats">
-              <div class="fstat"><span class="fstat-num">~25</span><span class="fstat-label">Clinical Sections</span></div>
-              <div class="fstat"><span class="fstat-num">15</span><span class="fstat-label">Clinical Risk Scores</span></div>
-              <div class="fstat"><span class="fstat-num">5<small>+</small></span><span class="fstat-label">Terminologies</span></div>
+          <div class="case-grid">
+            <div class="case-text">
+              <div class="case-block">
+                <h4 class="mono">Context</h4>
+                <p>Clinical decision support only works on data it can trust. Longitudinal medical records arrive as heterogeneous documents from many sources, with the same medication, lab or problem written a dozen different ways.</p>
+              </div>
+              <div class="case-block">
+                <h4 class="mono">Engineering challenge</h4>
+                <p>Standardize records across roughly 25 clinical sections — problems, medications, labs, vitals, allergies and more — into one canonical shape, map every value to the right terminology, and compute 15 clinical risk scores in a way that is explainable, not a black box.</p>
+              </div>
+              <div class="case-block">
+                <h4 class="mono">My contribution</h4>
+                <ul class="case-list">
+                  <li>Built the engine end to end in .NET on ASP.NET Minimal API.</li>
+                  <li>Designed the ~25 section pipelines mapping raw clinical data to LOINC, SNOMED CT, ICD-10, RxNorm, CPT and FDA terminologies.</li>
+                  <li>Implemented 15 risk scores — PREVENT, ASCVD-PCE, CHA₂DS₂-VASc, HAS-BLED, HEART and more — each returning the risk value, tier, inputs used and coefficient source.</li>
+                  <li>Built a cache-first data flow: Azure Blob Storage with a Cosmos DB reference index, MongoDB for terminology lookups.</li>
+                  <li>Added confidence scoring and full provenance on every normalized record.</li>
+                </ul>
+              </div>
             </div>
 
-            <div class="featured-terms">
-              <span class="terms-k">Terminologies</span>
-              <div class="chips chips--blue"><span>LOINC</span><span>SNOMED CT</span><span>ICD-10</span><span>RxNorm</span><span>CPT</span></div>
+            <figure class="case-arch" aria-label="TeleMEDIx architecture">
+              <svg class="arch" viewBox="40 18 462 540" role="img" aria-labelledby="arch-title">
+                <title id="arch-title">Data flow: raw records are parsed, normalized per clinical section, mapped to terminologies, assembled into a canonical snapshot and scored for clinical decision support. Blob Storage, a Cosmos DB reference index and MongoDB support the flow.</title>
+                <defs>
+                  <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#00a8ff"/></marker>
+                </defs>
+                <!-- main spine -->
+                <g class="arch-nodes">
+                  <g transform="translate(40 24)"><rect width="300" height="56" rx="6"/><text x="16" y="24" class="a-k">INPUT</text><text x="16" y="42" class="a-v">Raw longitudinal medical records</text></g>
+                  <g transform="translate(40 120)"><rect width="300" height="56" rx="6"/><text x="16" y="24" class="a-k">01 · PARSE</text><text x="16" y="42" class="a-v">Document parsing into clinical sections</text></g>
+                  <g transform="translate(40 216)"><rect width="300" height="72" rx="6"/><text x="16" y="24" class="a-k">02 · NORMALIZE</text><text x="16" y="42" class="a-v">~25 section pipelines</text><text x="16" y="59" class="a-s">Problems · Medications · Labs · Vitals · Allergies · …</text></g>
+                  <g transform="translate(40 328)"><rect width="300" height="72" rx="6"/><text x="16" y="24" class="a-k">03 · MAP</text><text x="16" y="42" class="a-v">Terminology mapping</text><text x="16" y="59" class="a-s">LOINC · SNOMED CT · ICD-10 · RxNorm · CPT · FDA</text></g>
+                  <g transform="translate(40 440)"><rect width="300" height="56" rx="6"/><text x="16" y="24" class="a-k">04 · ASSEMBLE</text><text x="16" y="42" class="a-v">Canonical patient snapshot + provenance</text></g>
+                  <g class="a-end" transform="translate(40 520)"><rect width="300" height="32" rx="6"/><text x="16" y="21" class="a-v">15 clinical risk scores → clinical decision support</text></g>
+                </g>
+                <g class="arch-spine">
+                  <line x1="190" y1="80" x2="190" y2="120" marker-end="url(#arr)"/>
+                  <line x1="190" y1="176" x2="190" y2="216" marker-end="url(#arr)"/>
+                  <line x1="190" y1="288" x2="190" y2="328" marker-end="url(#arr)"/>
+                  <line x1="190" y1="400" x2="190" y2="440" marker-end="url(#arr)"/>
+                  <line x1="190" y1="496" x2="190" y2="520" marker-end="url(#arr)"/>
+                </g>
+                <!-- side stores -->
+                <g class="arch-stores">
+                  <g transform="translate(380 128)"><rect width="120" height="48" rx="6"/><text x="12" y="20" class="a-k">CACHE</text><text x="12" y="37" class="a-v a-v--sm">Azure Blob Storage</text></g>
+                  <g transform="translate(380 228)"><rect width="120" height="48" rx="6"/><text x="12" y="20" class="a-k">INDEX</text><text x="12" y="37" class="a-v a-v--sm">Cosmos DB reference</text></g>
+                  <g transform="translate(380 340)"><rect width="120" height="48" rx="6"/><text x="12" y="20" class="a-k">LOOKUP</text><text x="12" y="37" class="a-v a-v--sm">MongoDB terminology</text></g>
+                </g>
+                <g class="arch-links">
+                  <path d="M340 152 H380"/>
+                  <path d="M340 252 H380"/>
+                  <path d="M340 364 H380"/>
+                </g>
+                <!-- travelling packet -->
+                <circle class="arch-packet" r="4">
+                  <animateMotion dur="7s" repeatCount="indefinite" path="M190 52 V148 V252 V364 V468 V536" keyPoints="0;0.18;0.4;0.62;0.82;1" keyTimes="0;0.18;0.4;0.62;0.82;1" calcMode="linear"/>
+                </circle>
+              </svg>
+              <figcaption class="mono muted">Fig. 02 — Normalization pipeline with cache-first data flow.</figcaption>
+            </figure>
+          </div>
+
+          <footer class="case-foot">
+            <div class="case-block">
+              <h4 class="mono">Technologies</h4>
+              <p class="mono case-tech">.NET · C# · ASP.NET Minimal API · MongoDB · Azure Cosmos DB · Azure Blob Storage · Redis</p>
             </div>
-
-            <div class="chips chips--tech"><span>.NET</span><span>C#</span><span>ASP.NET Minimal API</span><span>MongoDB</span><span>Azure Cosmos DB</span><span>Azure Blob Storage</span><span>Redis</span></div>
-
-            <button class="btn btn-outline btn-sm featured-toggle" type="button" aria-expanded="false" aria-controls="featured-details">
-              <span class="label-more">Explore the engine</span><span class="label-less">Show less</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            <div class="case-block">
+              <h4 class="mono">Outcome</h4>
+              <p>Standardized, fully-coded patient snapshots ready for downstream clinical decision support — every value traceable to its source, every risk score explainable through its inputs and coefficient source.</p>
+            </div>
+            <button type="button" class="btn btn-outline case-toggle" aria-expanded="false" aria-controls="case-telemedix-details">
+              <span class="label-more">View case study</span><span class="label-less">Close case study</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
             </button>
-          </div>
+          </footer>
 
-          <div class="featured-flow" aria-label="TeleMEDIx pipeline">
-            <div class="flow-head"><span>Pipeline</span><span class="flow-live"><i></i>data flow</span></div>
-            <ol class="flow">
-              <li class="flow-step"><span class="flow-idx">01</span><span class="flow-text">Raw Medical Records</span></li>
-              <li class="flow-step"><span class="flow-idx">02</span><span class="flow-text">Parsing</span></li>
-              <li class="flow-step"><span class="flow-idx">03</span><span class="flow-text">Normalization</span></li>
-              <li class="flow-step"><span class="flow-idx">04</span><span class="flow-text">Terminology Mapping</span><span class="flow-note">LOINC · SNOMED CT · ICD-10 · RxNorm · CPT</span></li>
-              <li class="flow-step"><span class="flow-idx">05</span><span class="flow-text">Canonical Patient Snapshot</span></li>
-              <li class="flow-step flow-step--end"><span class="flow-idx">06</span><span class="flow-text">Clinical Decision Support</span></li>
-            </ol>
-          </div>
-
-          <div class="featured-details" id="featured-details">
-            <div class="featured-details-inner">
-              <div class="detail-col">
-                <h4>Clinical Sections <span>~25</span></h4>
-                <div class="chips"><span>Problems</span><span>Medications</span><span>Labs</span><span>Vitals</span><span>Allergies</span><span>Encounters</span><span>Procedures</span><span>Immunizations</span><span class="chip-more">+ more</span></div>
+          <div class="case-details" id="case-telemedix-details">
+            <div class="case-details-inner">
+              <div class="detail">
+                <h4 class="mono">Clinical sections <span>~25</span></h4>
+                <p class="detail-list">Problems · Medications · Labs · Vitals · Allergies · Encounters · Procedures · Immunizations · and more</p>
               </div>
-              <div class="detail-col">
-                <h4>Risk Scores <span>15</span></h4>
-                <div class="chips"><span>PREVENT</span><span>ASCVD-PCE</span><span>CHA₂DS₂-VASc</span><span>HAS-BLED</span><span>HEART</span><span class="chip-more">+ 10 more</span></div>
+              <div class="detail">
+                <h4 class="mono">Risk scores <span>15</span></h4>
+                <p class="detail-list">PREVENT · ASCVD-PCE · CHA₂DS₂-VASc · HAS-BLED · HEART · and 10 more — each returning risk value, tier, inputs used and coefficient source</p>
               </div>
-              <div class="detail-col">
-                <h4>Engineering notes</h4>
-                <ul class="detail-list">
-                  <li>Cache-first data flow using Azure Blob Storage with a Cosmos DB reference index and MongoDB for terminology lookups.</li>
-                  <li>Each risk score returns the risk value, tier, inputs used and coefficient source.</li>
-                  <li>Confidence scoring and full provenance on every normalized record.</li>
+              <div class="detail">
+                <h4 class="mono">Terminologies <span>6</span></h4>
+                <p class="detail-list">LOINC · SNOMED CT · ICD-10 · RxNorm · CPT · FDA</p>
+              </div>
+              <div class="detail detail--wide">
+                <h4 class="mono">Engineering notes</h4>
+                <ul class="case-list">
+                  <li>Cache-first: a Blob Storage layer fronted by a Cosmos DB reference index avoids re-processing records already normalized.</li>
+                  <li>Terminology lookups are served from MongoDB so mapping stays fast as vocabularies grow.</li>
+                  <li>Every record carries a confidence score and provenance, so clinicians and downstream systems can see how a coded value was derived.</li>
                 </ul>
               </div>
             </div>
           </div>
         </article>
 
-        <!-- Featured 2: Telehealth backend -->
-        <article class="glass featured featured--flip reveal">
-          <div class="featured-flow imap-panel" aria-label="Telehealth backend integration map">
-            <div class="flow-head"><span>Integration map</span><span class="flow-live"><i></i>8 systems</span></div>
-            <div class="imap">
-              <svg class="imap-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-                <line x1="50" y1="50" x2="24" y2="10"/>
-                <line x1="50" y1="50" x2="76" y2="10"/>
-                <line x1="50" y1="50" x2="84" y2="30"/>
-                <line x1="50" y1="50" x2="84" y2="68"/>
-                <line x1="50" y1="50" x2="78" y2="86"/>
-                <line x1="50" y1="50" x2="22" y2="86"/>
-                <line x1="50" y1="50" x2="16" y2="68"/>
-                <line x1="50" y1="50" x2="16" y2="30"/>
-              </svg>
-              <div class="imap-core">
-                <span class="imap-core-k">.NET 8</span>
-                <span class="imap-core-v">Web API</span>
+        <!-- Case study 02: Telehealth backend -->
+        <article class="case case--ledger reveal" id="case-telehealth">
+          <header class="case-head">
+            <div class="case-meta mono">
+              <span>Case study 02</span><i></i><span>Telehealth platform</span><i></i><span>App Innovation Technologies</span>
+            </div>
+            <h3 class="case-title case-title--md">.NET 8 Telehealth Backend</h3>
+            <p class="case-sub">The REST API behind a telehealth platform that consolidates a patient's scattered hospital records into one unified health record and runs the full care workflow with AI clinical support.</p>
+          </header>
+
+          <div class="ledger-grid">
+            <div class="case-text">
+              <div class="case-block">
+                <h4 class="mono">Context</h4>
+                <p>A patient's history is spread across hospitals, networks and devices. The platform needed one record per patient — and everything around it: onboarding, consent, messaging, visits and payments.</p>
               </div>
-              <div class="imap-node imap-node--1"><strong>Kno2</strong><small>TEFCA · Carequality · Direct · Fax</small></div>
-              <div class="imap-node imap-node--2"><strong>Epic FHIR</strong><small>Hospital records</small></div>
-              <div class="imap-node imap-node--3"><strong>Video Visits</strong><small>Booking · Payments</small></div>
-              <div class="imap-node imap-node--4"><strong>In-app Chat</strong><small>Patient ↔ Doctor</small></div>
-              <div class="imap-node imap-node--5"><strong>AI</strong><small>Transcription · SOAP notes</small></div>
-              <div class="imap-node imap-node--6"><strong>Wearables</strong><small>Fitbit · HealthKit · Garmin · Google Fit</small></div>
-              <div class="imap-node imap-node--7"><strong>MongoDB</strong><small>Cosmos DB</small></div>
-              <div class="imap-node imap-node--8"><strong>Redis · Blob</strong><small>Hangfire jobs</small></div>
+              <div class="case-block">
+                <h4 class="mono">Engineering challenge</h4>
+                <p>Discover and retrieve records across health information networks, verify identity before anything is pulled, parse C-CDA and FHIR documents (~27 clinical sections) into one longitudinal record, and keep every exchange auditable under HIPAA-aligned handling.</p>
+              </div>
+              <div class="case-block">
+                <h4 class="mono">My contribution</h4>
+                <ul class="case-list">
+                  <li>JWT authentication with role-based access and per-device refresh tokens; multi-step patient onboarding and HIPAA consent management.</li>
+                  <li>Health-record aggregation via Kno2 (TEFCA / Carequality) and Epic FHIR with identity verification prior to retrieval.</li>
+                  <li>Secure communication: patient–doctor in-app chat, plus document exchange over Kno2 fax and Direct Secure Messaging with delivery auditing and read-receipt notifications.</li>
+                  <li>Telehealth video visits — booking, availability, per-visit and subscription payments — with live transcription and AI-generated SOAP notes.</li>
+                  <li>Wearable vitals from Fitbit, Apple HealthKit, Garmin and Google Fit, processed as Hangfire background jobs.</li>
+                </ul>
+              </div>
             </div>
+
+            <aside class="ledger" aria-label="Systems the backend integrates">
+              <h4 class="mono ledger-title">Systems ledger</h4>
+              <dl class="ledger-list">
+                <div><dt class="mono">Networks</dt><dd>Kno2 — TEFCA · Carequality · Direct · Fax</dd></div>
+                <div><dt class="mono">EHR</dt><dd>Epic FHIR</dd></div>
+                <div><dt class="mono">Documents</dt><dd>C-CDA · FHIR — ~27 clinical sections</dd></div>
+                <div><dt class="mono">Identity</dt><dd>JWT · role-based access · per-device refresh tokens</dd></div>
+                <div><dt class="mono">Care</dt><dd>Video visits · booking · payments · in-app chat</dd></div>
+                <div><dt class="mono">AI</dt><dd>Live transcription · SOAP notes</dd></div>
+                <div><dt class="mono">Devices</dt><dd>Fitbit · Apple HealthKit · Garmin · Google Fit</dd></div>
+                <div><dt class="mono">Storage</dt><dd>MongoDB (Cosmos DB) · Redis · Azure Blob Storage</dd></div>
+                <div><dt class="mono">Jobs</dt><dd>Hangfire background processing</dd></div>
+              </dl>
+              <div class="ledger-flow" aria-label="Record aggregation flow">
+                <span>Discover</span><i></i><span>Verify identity</span><i></i><span>Retrieve</span><i></i><span>Parse</span><i></i><span>One record</span>
+              </div>
+            </aside>
           </div>
 
-          <div class="featured-main">
-            <div class="featured-label">
-              <span class="pill">Featured</span>
-              <span class="featured-cat">Healthcare · Telehealth Platform</span>
+          <footer class="case-foot">
+            <div class="case-block">
+              <h4 class="mono">Technologies</h4>
+              <p class="mono case-tech">.NET 8 · C# · ASP.NET Web API · MongoDB (Cosmos DB) · Redis · Azure Blob Storage · Hangfire · JWT — Standards: C-CDA · FHIR · HIPAA</p>
             </div>
-            <h3 class="featured-title featured-title--md">.NET 8 Telehealth Backend</h3>
-            <p class="featured-subtitle">Unified Health Record &amp; Telehealth Platform API</p>
-            <p class="featured-desc">A .NET 8 REST API backend powering a telehealth platform that consolidates a patient's scattered hospital records into one unified health record, and runs the full care workflow — onboarding, record aggregation, secure messaging, video visits, in-app chat and wearable vitals — with AI clinical support.</p>
-
-            <div class="featured-stats">
-              <div class="fstat"><span class="fstat-num">~27</span><span class="fstat-label">Clinical Sections parsed</span></div>
-              <div class="fstat"><span class="fstat-num">4</span><span class="fstat-label">Wearable Sources</span></div>
-              <div class="fstat"><span class="fstat-num">2</span><span class="fstat-label">Health Networks</span></div>
+            <div class="case-block">
+              <h4 class="mono">Outcome</h4>
+              <p>One longitudinal medical record per patient, with a complete and auditable care workflow around it — from first login to a transcribed visit.</p>
             </div>
-
-            <ul class="built-list">
-              <li><strong>Authentication &amp; access</strong> — JWT auth with role-based access and per-device refresh tokens</li>
-              <li><strong>Patient onboarding</strong> — multi-step onboarding with HIPAA consent management</li>
-              <li><strong>Record aggregation</strong> — Kno2 (TEFCA / Carequality) and Epic FHIR retrieval with identity verification, C-CDA / FHIR parsing into one longitudinal medical record</li>
-              <li><strong>Secure communication</strong> — patient–doctor in-app chat, plus Kno2 Direct Secure Messaging &amp; fax with delivery auditing and read receipts</li>
-              <li><strong>Telehealth visits</strong> — video visits with booking, availability, per-visit &amp; subscription payments, live transcription and AI-generated SOAP notes</li>
-              <li><strong>Wearable vitals</strong> — Fitbit, Apple HealthKit, Garmin and Google Fit integrations run as Hangfire background jobs</li>
-            </ul>
-
-            <div class="chips chips--tech"><span>.NET 8</span><span>C#</span><span>ASP.NET Web API</span><span>MongoDB (Cosmos DB)</span><span>Redis</span><span>Azure Blob Storage</span><span>Hangfire</span><span>JWT</span></div>
-            <div class="featured-terms">
-              <span class="terms-k">Standards</span>
-              <div class="chips chips--blue"><span>C-CDA</span><span>FHIR</span><span>HIPAA</span></div>
-            </div>
-
-            <button class="btn btn-outline btn-sm featured-toggle" type="button" aria-expanded="false" aria-controls="featured-details-2">
-              <span class="label-more">Explore the integrations</span><span class="label-less">Show less</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            <button type="button" class="btn btn-outline case-toggle" aria-expanded="false" aria-controls="case-telehealth-details">
+              <span class="label-more">View case study</span><span class="label-less">Close case study</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
             </button>
-          </div>
+          </footer>
 
-          <div class="featured-details" id="featured-details-2">
-            <div class="featured-details-inner">
-              <div class="detail-col">
-                <h4>Record aggregation</h4>
-                <ol class="mini-flow">
-                  <li>Kno2 / Epic FHIR discovery</li>
-                  <li>Identity verification</li>
-                  <li>C-CDA / FHIR parsing (~27 sections)</li>
-                  <li>Longitudinal medical record</li>
+          <div class="case-details" id="case-telehealth-details">
+            <div class="case-details-inner">
+              <div class="detail">
+                <h4 class="mono">Record aggregation</h4>
+                <ol class="steps">
+                  <li>Discover records across hospitals via Kno2 and Epic FHIR</li>
+                  <li>Verify patient identity before retrieval</li>
+                  <li>Parse C-CDA / FHIR documents — ~27 clinical sections</li>
+                  <li>Merge into one longitudinal medical record</li>
                 </ol>
               </div>
-              <div class="detail-col">
-                <h4>Communication</h4>
-                <div class="chips"><span>In-app chat</span><span>Direct Secure Messaging</span><span>Kno2 fax</span><span>Delivery auditing</span><span>Read receipts</span></div>
+              <div class="detail">
+                <h4 class="mono">Communication</h4>
+                <p class="detail-list">In-app chat · Direct Secure Messaging · Kno2 fax · delivery auditing · read-receipt notifications</p>
               </div>
-              <div class="detail-col">
-                <h4>Telehealth</h4>
-                <div class="chips"><span>Video visits</span><span>Booking</span><span>Doctor availability</span><span>Per-visit payments</span><span>Subscriptions</span><span>Live transcription</span><span>AI SOAP notes</span></div>
+              <div class="detail">
+                <h4 class="mono">Telehealth</h4>
+                <p class="detail-list">Video visits · booking · doctor availability · per-visit payments · subscriptions · live transcription · AI SOAP notes</p>
               </div>
             </div>
           </div>
         </article>
 
-        <!-- Other projects -->
-        <div class="project-grid project-grid--compact">
-          <article class="glass pcard reveal">
-            <div class="pcard-visual">
-              <svg viewBox="0 0 200 110" fill="none" aria-hidden="true">
-                <rect x="22" y="38" width="46" height="46" rx="6" class="v-box"/><rect x="34" y="50" width="22" height="22" rx="3" class="v-badge"/>
-                <path d="M86 47 a20 20 0 0 1 0 28" class="v-wave"/><path d="M96 39 a30 30 0 0 1 0 44" class="v-wave" opacity=".7"/><path d="M106 31 a40 40 0 0 1 0 60" class="v-wave" opacity=".4"/>
-                <rect x="130" y="30" width="50" height="10" rx="3" class="v-bar"/><rect x="130" y="50" width="38" height="10" rx="3" class="v-bar"/><rect x="130" y="70" width="44" height="10" rx="3" class="v-bar"/>
-                <circle cx="188" cy="35" r="3" class="v-dot"/>
-              </svg>
-            </div>
-            <div class="pcard-body">
-              <p class="pcard-cat">Enterprise · ERP</p>
-              <h3 class="pcard-title">ICS / Roomer</h3>
-              <p class="pcard-desc">ERP inventory platform with IoT/RFID connectivity for product ownership, stock movement and real-time quantity tracking.</p>
-              <div class="chips"><span>ASP.NET Core</span><span>C#</span><span>SQL Server</span><span>IoT / RFID</span></div>
-            </div>
-          </article>
-
-          <article class="glass pcard reveal">
-            <div class="pcard-visual">
-              <svg viewBox="0 0 200 110" fill="none" aria-hidden="true">
-                <circle cx="52" cy="55" r="18" class="v-ring"/><circle cx="52" cy="55" r="6" class="v-badge"/>
-                <path d="M70 55 H120 l0 -8 M104 55 l0 8 M112 55 l0 6" class="v-line"/>
-                <rect x="128" y="30" width="52" height="50" rx="5" class="v-box"/><path d="M138 44 H170 M138 54 H164 M138 64 H158" class="v-line" opacity=".7"/>
-                <circle cx="172" cy="36" r="3" class="v-dot v-dot--red"/>
-              </svg>
-            </div>
-            <div class="pcard-body">
-              <p class="pcard-cat">Enterprise</p>
-              <h3 class="pcard-title">Scantron — License Provisioning &amp; Document Auditing</h3>
-              <p class="pcard-desc">License-provisioning app generating scanner product keys from organization DLLs with expiry tracking, plus a Price Book document-auditing tool.</p>
-              <div class="chips"><span>ASP.NET MVC</span><span>C#</span><span>EF Core</span><span>SQL Server</span></div>
-            </div>
-          </article>
-
-          <article class="glass pcard reveal">
-            <div class="pcard-visual">
-              <svg viewBox="0 0 200 110" fill="none" aria-hidden="true">
-                <rect x="20" y="22" width="160" height="66" rx="5" class="v-box"/>
-                <path d="M20 40 H180 M20 58 H180 M20 74 H180 M74 22 V88 M128 22 V88" class="v-line" opacity=".55"/>
-                <rect x="28" y="28" width="38" height="6" rx="3" class="v-badge"/><rect x="82" y="28" width="38" height="6" rx="3" class="v-badge"/><rect x="136" y="28" width="36" height="6" rx="3" class="v-badge"/>
-                <rect x="28" y="46" width="30" height="6" rx="3" class="v-bar"/><rect x="82" y="46" width="24" height="6" rx="3" class="v-bar"/><rect x="136" y="46" width="34" height="6" rx="3" class="v-bar"/>
-                <rect x="28" y="63" width="34" height="6" rx="3" class="v-bar"/><rect x="82" y="63" width="36" height="6" rx="3" class="v-bar"/><rect x="136" y="63" width="22" height="6" rx="3" class="v-bar"/>
-                <rect x="28" y="79" width="26" height="5" rx="2.5" class="v-bar"/><rect x="82" y="79" width="30" height="5" rx="2.5" class="v-bar"/><rect x="136" y="79" width="30" height="5" rx="2.5" class="v-bar"/>
-              </svg>
-            </div>
-            <div class="pcard-body">
-              <p class="pcard-cat">Data · Reporting</p>
-              <h3 class="pcard-title">Survey Data Management</h3>
-              <p class="pcard-desc">Microsoft Access databases and reporting for NYU, Union College, Blues Health and NASP — raw survey data into clean reports.</p>
-              <div class="chips"><span>Microsoft Access</span><span>C#</span><span>ADO.NET</span></div>
-            </div>
-          </article>
-
-          <article class="glass pcard reveal">
-            <div class="pcard-visual">
-              <svg viewBox="0 0 200 110" fill="none" aria-hidden="true">
-                <rect x="20" y="18" width="160" height="74" rx="6" class="v-box"/><path d="M20 32 H180" class="v-line" opacity=".6"/>
-                <circle cx="30" cy="25" r="2.4" class="v-dot v-dot--red"/><circle cx="39" cy="25" r="2.4" class="v-dot" opacity=".55"/><circle cx="48" cy="25" r="2.4" class="v-dot" opacity=".3"/>
-                <text x="30" y="50" class="v-mono">&gt;_ build --release</text>
-                <rect x="30" y="58" width="90" height="5" rx="2.5" class="v-bar"/><rect x="30" y="68" width="120" height="5" rx="2.5" class="v-bar"/><rect x="30" y="78" width="60" height="5" rx="2.5" class="v-bar"/>
-                <rect x="96" y="76" width="14" height="9" class="v-badge v-cursor"/>
-              </svg>
-            </div>
-            <div class="pcard-body">
-              <p class="pcard-cat">Automation</p>
-              <h3 class="pcard-title">Windows &amp; Console Automation Tools</h3>
-              <p class="pcard-desc">Windows and console applications automating recurring manual processes through console-based builds.</p>
-              <div class="chips"><span>C#</span><span>Windows Forms</span><span>Console Apps</span></div>
-            </div>
-          </article>
-        </div>
-
-        <a href="https://github.com/dharun0108" target="_blank" rel="noopener" class="glass gh-bar reveal">
-          <span class="gh-bar-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg></span>
-          <span class="gh-bar-text"><strong>See more on GitHub</strong><small>More repositories, experiments and practice projects</small></span>
-          <span class="gh-bar-link">github.com/dharun0108
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </span>
-        </a>
-      </div>
-    </section>
-
-    <!-- ============================================================ HEALTHCARE -->
-    <section class="section healthcare" id="healthcare">
-      <div class="glow glow--hc" aria-hidden="true"></div>
-      <div class="container">
-        <h2 class="section-title reveal">Healthcare <span class="accent">+</span> Technology</h2>
-        <p class="section-lead reveal">From hospital systems to clinical decision support — how patient data moves through the platforms I build, under HIPAA-aligned handling.</p>
-
-        <div class="glass hc-board reveal">
-          <div class="hc-flow" aria-label="Healthcare data flow">
-            <div class="hc-node"><span class="hc-idx">01</span><span class="hc-label">Hospital Systems</span></div>
-            <div class="hc-link"></div>
-            <div class="hc-node"><span class="hc-idx">02</span><span class="hc-label">Kno2 / Epic FHIR</span></div>
-            <div class="hc-link"></div>
-            <div class="hc-node hc-node--red"><span class="hc-idx">03</span><span class="hc-label">Identity Verification</span></div>
-            <div class="hc-link"></div>
-            <div class="hc-node"><span class="hc-idx">04</span><span class="hc-label">C-CDA / FHIR</span></div>
-            <div class="hc-link"></div>
-            <div class="hc-node"><span class="hc-idx">05</span><span class="hc-label">Clinical Data Processing</span></div>
-            <div class="hc-link"></div>
-            <div class="hc-node"><span class="hc-idx">06</span><span class="hc-label">Normalization</span></div>
-            <div class="hc-link"></div>
-            <div class="hc-node"><span class="hc-idx">07</span><span class="hc-label">Longitudinal Medical Record</span></div>
-            <div class="hc-link"></div>
-            <div class="hc-node hc-node--end"><span class="hc-idx">08</span><span class="hc-label">Clinical Decision Support</span></div>
+        <!-- Index of other work -->
+        <div class="index reveal">
+          <div class="index-head">
+            <h3 class="index-title">Also built</h3>
+            <p class="mono muted">Enterprise and data projects from the same role</p>
           </div>
-          <div class="hc-facts">
-            <div class="hc-fact"><span class="hc-fact-k">Networks</span><span class="hc-fact-v">TEFCA · Carequality · Direct Secure Messaging · Fax</span></div>
-            <div class="hc-fact"><span class="hc-fact-k">Standards</span><span class="hc-fact-v">FHIR · C-CDA · HIPAA-aligned data handling</span></div>
-            <div class="hc-fact"><span class="hc-fact-k">Terminologies</span><span class="hc-fact-v">LOINC · SNOMED CT · ICD-10 · RxNorm · CPT</span></div>
-            <div class="hc-fact"><span class="hc-fact-k">Signals</span><span class="hc-fact-v">Fitbit · Apple HealthKit · Garmin · Google Fit</span></div>
-          </div>
+          <ol class="index-list">
+            <li class="index-row">
+              <span class="mono index-no">03</span>
+              <div class="index-main">
+                <h4>ICS / Roomer</h4>
+                <p>ERP inventory platform managing inventory operations end to end, with RFID tags identifying product ownership, tracking stock movement and monitoring remaining quantities in real time.</p>
+              </div>
+              <span class="index-cat">ERP · IoT / RFID</span>
+              <span class="mono index-tech">ASP.NET Core · C# · SQL Server</span>
+            </li>
+            <li class="index-row">
+              <span class="mono index-no">04</span>
+              <div class="index-main">
+                <h4>Scantron — License Provisioning &amp; Price Book</h4>
+                <p>A license-provisioning web app where users obtain scanner product licenses generated from organization-provided DLLs with expiry and usage tracking, and a document-auditing tool for securely managing organizational asset documents.</p>
+              </div>
+              <span class="index-cat">Licensing · Auditing</span>
+              <span class="mono index-tech">ASP.NET MVC · C# · EF Core · SQL Server</span>
+            </li>
+            <li class="index-row">
+              <span class="mono index-no">05</span>
+              <div class="index-main">
+                <h4>Survey Data Management</h4>
+                <p>Microsoft Access databases for New York University, Union College, Blues Health and the National Association of School Psychologists — survey data collected and converted into clean, human-readable reports.</p>
+              </div>
+              <span class="index-cat">Data · Reporting</span>
+              <span class="mono index-tech">Microsoft Access · C# · ADO.NET</span>
+            </li>
+            <li class="index-row">
+              <span class="mono index-no">06</span>
+              <div class="index-main">
+                <h4>Windows &amp; Console Automation Tools</h4>
+                <p>Windows and console applications that automate recurring manual processes through console-based builds.</p>
+              </div>
+              <span class="index-cat">Automation</span>
+              <span class="mono index-tech">C# · Windows Forms · Console</span>
+            </li>
+          </ol>
+          <a href="https://github.com/dharun0108" target="_blank" rel="noopener" class="index-more">
+            <span>More repositories and practice projects on GitHub</span>
+            <span class="mono">github.com/dharun0108 <span aria-hidden="true">→</span></span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================ CONTACT -->
-    <section class="section contact" id="contact">
-      <div class="glow glow--contact" aria-hidden="true"></div>
+    <!-- ============================================================ 06 IMPACT -->
+    <section class="chapter impact" id="impact" data-chapter="impact">
       <div class="container">
-        <h2 class="section-title reveal">Contact</h2>
-        <p class="section-lead reveal">Have a project, integration challenge, or software idea? Let’s connect.</p>
-
-        <form class="glass contact-form reveal" id="contact-form" action="mailto:dharun0108@gmail.com" method="post" enctype="text/plain" novalidate>
-          <div class="field">
-            <label for="cf-name">Name</label>
-            <input id="cf-name" name="name" type="text" autocomplete="name" required />
-          </div>
-          <div class="field">
-            <label for="cf-email">Email</label>
-            <input id="cf-email" name="email" type="email" autocomplete="email" required />
-          </div>
-          <div class="field">
-            <label for="cf-message">Message</label>
-            <textarea id="cf-message" name="message" rows="6" required></textarea>
-          </div>
-          <div class="form-foot">
-            <p class="form-note" id="form-note">Opens your email app with the message pre-filled.</p>
-            <button type="submit" class="btn btn-primary">Send a message
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-            </button>
-          </div>
-        </form>
-
-        <div class="contact-meta reveal">
-          <a href="mailto:dharun0108@gmail.com" class="meta-item">
-            <span class="meta-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-            <span>dharun0108@gmail.com</span>
-          </a>
-          <a href="tel:+916383240397" class="meta-item">
-            <span class="meta-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
-            <span>+91&nbsp;6383240397</span>
-          </a>
-          <span class="meta-item">
-            <span class="meta-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
-            <span>Erode, Tamil Nadu, India</span>
-          </span>
+        <p class="chapter-tag reveal"><span>Chapter 06</span><i></i><span>The Impact</span></p>
+        <div class="impact-head">
+          <h2 class="chapter-title reveal">Why fragmented records are worth fixing.</h2>
+          <p class="lede reveal">A clinician rarely sees a patient's whole history. It lives in several hospitals, in different document formats, using different words for the same thing. The systems I build retrieve those records, translate them into a shared vocabulary and hand back one structured, longitudinal record that decision-support logic can actually reason about.</p>
         </div>
 
-        <div class="socials socials--center reveal">
-          <a href="https://github.com/dharun0108" class="social" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg></a>
-          <a href="https://linkedin.com/in/dharunsubramani01" class="social" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 20.4h-3.5v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2 2 0 1 1 0-4.1 2 2 0 0 1 0 4.1zM7.1 20.4H3.6V9h3.5v11.4zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.5c0 1 .8 1.8 1.8 1.8h20.4c1 0 1.8-.8 1.8-1.8V1.7c0-1-.8-1.7-1.8-1.7z"/></svg></a>
-          <a href="mailto:dharun0108@gmail.com" class="social" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+        <div class="flow reveal" id="impact-flow">
+          <ol class="stages" role="tablist" aria-label="Clinical data flow stages">
+            <li><button type="button" class="stage is-active" role="tab" aria-selected="true" data-stage="0" id="stage-0" aria-controls="panel-0"><span class="mono">01</span><strong>Retrieve</strong><small>Hospital systems · Kno2 / Epic FHIR · identity verification</small></button></li>
+            <li><button type="button" class="stage" role="tab" aria-selected="false" data-stage="1" id="stage-1" aria-controls="panel-1" tabindex="-1"><span class="mono">02</span><strong>Parse</strong><small>C-CDA · FHIR documents · ~27 clinical sections</small></button></li>
+            <li><button type="button" class="stage" role="tab" aria-selected="false" data-stage="2" id="stage-2" aria-controls="panel-2" tabindex="-1"><span class="mono">03</span><strong>Normalize</strong><small>LOINC · SNOMED CT · ICD-10 · RxNorm · CPT</small></button></li>
+            <li><button type="button" class="stage" role="tab" aria-selected="false" data-stage="3" id="stage-3" aria-controls="panel-3" tabindex="-1"><span class="mono">04</span><strong>Decide</strong><small>Longitudinal record · 15 risk scores · decision support</small></button></li>
+          </ol>
+
+          <div class="flow-visual" aria-hidden="true">
+            <svg viewBox="0 0 1160 150" class="flow-svg">
+              <path class="flow-track" d="M40 75 H1120"/>
+              <path class="flow-fill" id="flow-fill" d="M40 75 H1120"/>
+              <g class="flow-dots">
+                <circle cx="40" cy="75" r="6"/><circle cx="400" cy="75" r="6"/><circle cx="760" cy="75" r="6"/><circle cx="1120" cy="75" r="6"/>
+              </g>
+              <!-- fragmented documents -->
+              <g class="frag" transform="translate(70 30)">
+                <rect x="0" y="6" width="44" height="58" rx="3"/><rect x="18" y="0" width="44" height="58" rx="3"/><rect x="36" y="12" width="44" height="58" rx="3"/>
+                <line x1="44" y1="26" x2="70" y2="26"/><line x1="44" y1="36" x2="66" y2="36"/><line x1="44" y1="46" x2="72" y2="46"/>
+              </g>
+              <!-- structured record -->
+              <g class="struct" transform="translate(990 32)">
+                <rect x="0" y="0" width="100" height="86" rx="4"/>
+                <line x1="10" y1="18" x2="90" y2="18"/><line x1="10" y1="34" x2="70" y2="34"/><line x1="10" y1="50" x2="84" y2="50"/><line x1="10" y1="66" x2="60" y2="66"/>
+                <circle cx="82" cy="34" r="3"/><circle cx="82" cy="66" r="3"/>
+              </g>
+              <circle class="flow-packet" r="5"><animateMotion dur="6s" repeatCount="indefinite" path="M40 75 H1120"/></circle>
+            </svg>
+          </div>
+
+          <div class="stage-panels">
+            <div class="stage-panel is-active" role="tabpanel" id="panel-0" aria-labelledby="stage-0">
+              <h3>Records are discovered and retrieved from the hospitals that hold them.</h3>
+              <p>Through Kno2 on the TEFCA and Carequality networks and directly from Epic via FHIR. Identity is verified before any retrieval, and every exchange — including Direct Secure Messaging and fax — is audited.</p>
+            </div>
+            <div class="stage-panel" role="tabpanel" id="panel-1" aria-labelledby="stage-1" hidden>
+              <h3>Documents are parsed into their clinical sections.</h3>
+              <p>C-CDA and FHIR documents are broken down into roughly 27 sections — problems, medications, labs, vitals, allergies, encounters and more — so that content from different hospitals lines up side by side.</p>
+            </div>
+            <div class="stage-panel" role="tabpanel" id="panel-2" aria-labelledby="stage-2" hidden>
+              <h3>Every value is translated into a shared clinical vocabulary.</h3>
+              <p>TeleMEDIx maps raw entries to LOINC, SNOMED CT, ICD-10, RxNorm and CPT, attaching a confidence score and provenance to each coded value. The same lab means the same thing regardless of where it was recorded.</p>
+            </div>
+            <div class="stage-panel" role="tabpanel" id="panel-3" aria-labelledby="stage-3" hidden>
+              <h3>One longitudinal record becomes the input to decision support.</h3>
+              <p>The canonical patient snapshot feeds 15 clinical risk scores — PREVENT, ASCVD-PCE, CHA₂DS₂-VASc, HAS-BLED, HEART and others — each returning its value, tier, inputs and coefficient source so a clinician can see why.</p>
+            </div>
+          </div>
+        </div>
+        <p class="impact-note mono muted reveal">Illustrative of the data flow only — no patient data, credentials or proprietary implementation details are shown.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================ 07 CONNECTION -->
+    <section class="chapter connect" id="contact" data-chapter="contact">
+      <div class="container">
+        <p class="chapter-tag reveal"><span>Chapter 07</span><i></i><span>The Connection</span></p>
+        <div class="connect-grid">
+          <div class="connect-copy">
+            <h2 class="connect-title reveal">Let’s build something <em>meaningful.</em></h2>
+            <p class="lede reveal">Have a project, an integration challenge or a software idea? I’m open to conversations about backend engineering, Azure and healthcare interoperability work.</p>
+
+            <dl class="connect-list reveal">
+              <div><dt class="mono muted">Email</dt><dd><a href="mailto:dharun0108@gmail.com">dharun0108@gmail.com</a></dd></div>
+              <div><dt class="mono muted">Phone</dt><dd><a href="tel:+916383240397">+91&nbsp;6383240397</a></dd></div>
+              <div><dt class="mono muted">Location</dt><dd>Erode, Tamil Nadu, India</dd></div>
+              <div><dt class="mono muted">GitHub</dt><dd><a href="https://github.com/dharun0108" target="_blank" rel="noopener">github.com/dharun0108</a></dd></div>
+              <div><dt class="mono muted">LinkedIn</dt><dd><a href="https://linkedin.com/in/dharunsubramani01" target="_blank" rel="noopener">linkedin.com/in/dharunsubramani01</a></dd></div>
+            </dl>
+
+            <figure class="connect-figure reveal">
+              <div class="figure-frame figure-frame--sm">
+                <img src="assets/profile.jpg" alt="" class="figure-img" width="1000" height="1000" loading="lazy" />
+                <span class="figure-rule figure-rule--v" aria-hidden="true"></span>
+                <span class="figure-mark" aria-hidden="true"></span>
+              </div>
+              <figcaption class="mono muted">Fig. 03 — End of chapter 07. Thanks for reading.</figcaption>
+            </figure>
+          </div>
+
+          <form class="connect-form reveal" id="contact-form" action="mailto:dharun0108@gmail.com" method="post" enctype="text/plain" novalidate>
+            <p class="form-intro mono muted">Send a note</p>
+            <div class="field">
+              <label for="cf-name">Name</label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required aria-describedby="err-name" />
+              <span class="field-error mono" id="err-name" hidden>Please enter your name.</span>
+            </div>
+            <div class="field">
+              <label for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required aria-describedby="err-email" />
+              <span class="field-error mono" id="err-email" hidden>Please enter a valid email address.</span>
+            </div>
+            <div class="field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="6" required aria-describedby="err-message"></textarea>
+              <span class="field-error mono" id="err-message" hidden>Please write a short message.</span>
+            </div>
+            <div class="form-foot">
+              <p class="form-note" id="form-note" role="status">There is no server behind this form — sending opens your email app with the message pre-filled.</p>
+              <button type="submit" class="btn btn-primary">Send message <span aria-hidden="true">→</span></button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
@@ -596,16 +644,16 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="#home" class="brand">Dharun<span>&lt;/&gt;</span></a>
-        <p>Full Stack .NET Developer</p>
+        <a href="#intro" class="brand">Dharun<span>&lt;/&gt;</span></a>
+        <p class="mono muted">Full Stack .NET Developer</p>
       </div>
-      <nav class="footer-links" aria-label="Footer">
-        <a href="#home">Home</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+      <nav class="footer-index mono" aria-label="Chapter index">
+        <a href="#intro">01 Intro</a><a href="#engineer">02 Engineer</a><a href="#journey">03 Journey</a><a href="#craft">04 Craft</a><a href="#work">05 Work</a><a href="#impact">06 Impact</a><a href="#contact">07 Contact</a>
       </nav>
-      <p class="footer-copy">© <span id="year">2026</span> Dharun S</p>
+      <p class="footer-copy mono muted">© <span id="year">2026</span> Dharun S · Deployed via GitHub Actions</p>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

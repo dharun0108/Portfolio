@@ -1,102 +1,157 @@
-/* Dharun S — Portfolio interactions (desktop phase) */
+/* Dharun S — Portfolio interactions · editorial story system */
 (function () {
   "use strict";
 
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const header = document.querySelector(".site-header");
+  const progressBar = document.getElementById("progress-bar");
   const navLinks = Array.from(document.querySelectorAll(".nav-link"));
-  const sections = navLinks.map((l) => document.getElementById(l.dataset.nav)).filter(Boolean);
+  const chapters = Array.from(document.querySelectorAll("[data-chapter]"));
 
-  /* Header state */
-  const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 24);
+  /* ------------------------------------------------ Header + reading progress + chapter spy */
+  const onScroll = () => {
+    const y = window.scrollY;
+    header.classList.toggle("is-scrolled", y > 24);
+
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    if (progressBar) progressBar.style.width = (max > 0 ? Math.min(100, (y / max) * 100) : 0) + "%";
+
+    const probe = y + window.innerHeight * 0.4;
+    let current = null;
+    for (const c of chapters) if (c.offsetTop <= probe) current = c.dataset.chapter;
+    if (window.innerHeight + y >= document.documentElement.scrollHeight - 4) current = chapters[chapters.length - 1].dataset.chapter;
+    navLinks.forEach((l) => l.classList.toggle("is-active", l.dataset.nav === current));
+  };
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
 
-  /* Scroll spy */
-  const setActive = (id) => navLinks.forEach((l) => l.classList.toggle("is-active", l.dataset.nav === id));
-  const spy = () => {
-    const probe = window.scrollY + window.innerHeight * 0.38;
-    let current = sections[0] ? sections[0].id : null;
-    for (const s of sections) if (s.offsetTop <= probe) current = s.id;
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 4) current = sections[sections.length - 1].id;
-    if (current) setActive(current);
-  };
-  spy();
-  window.addEventListener("scroll", spy, { passive: true });
-  window.addEventListener("resize", spy);
-
-  /* Scroll reveal */
+  /* ------------------------------------------------ Restrained scroll reveal (chapter-level only) */
   const revealEls = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window) {
+  if ("IntersectionObserver" in window && !reduceMotion) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("is-visible"); io.unobserve(e.target); } });
-    }, { threshold: 0.1, rootMargin: "0px 0px -6% 0px" });
+    }, { threshold: 0.08, rootMargin: "0px 0px -4% 0px" });
     revealEls.forEach((el) => io.observe(el));
   } else {
     revealEls.forEach((el) => el.classList.add("is-visible"));
   }
 
-  /* Metric counters */
-  const counters = document.querySelectorAll(".count");
-  const easeOut = (t) => 1 - Math.pow(1 - t, 3);
-  const runCounter = (el) => {
-    const target = parseInt(el.dataset.count, 10) || 0;
-    const start = performance.now();
-    const tick = (now) => {
-      const p = Math.min(1, (now - start) / 1400);
-      el.textContent = Math.round(easeOut(p) * target);
-      if (p < 1) requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  };
-  if ("IntersectionObserver" in window && counters.length) {
-    const cio = new IntersectionObserver((entries) => {
-      entries.forEach((e) => { if (e.isIntersecting) { runCounter(e.target); cio.unobserve(e.target); } });
-    }, { threshold: 0.6 });
-    counters.forEach((c) => cio.observe(c));
-  } else {
-    counters.forEach((c) => (c.textContent = c.dataset.count));
-  }
-
-  /* Featured project toggles (one per featured card) */
-  document.querySelectorAll(".featured-toggle").forEach((toggle) => {
-    const card = toggle.closest(".featured");
-    if (!card) return;
+  /* ------------------------------------------------ Case study progressive disclosure */
+  document.querySelectorAll(".case-toggle").forEach((toggle) => {
+    const card = toggle.closest(".case");
+    const panel = document.getElementById(toggle.getAttribute("aria-controls"));
+    if (!card || !panel) return;
     toggle.addEventListener("click", () => {
       const open = card.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", String(open));
+      if (open) {
+        // keep the opened details in view without hijacking the scroll
+        const rect = panel.getBoundingClientRect();
+        if (rect.top > window.innerHeight * 0.7) panel.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+      }
     });
   });
 
-  /* Contact form → opens the visitor's mail client with a pre-filled message (no backend required) */
-  const form = document.getElementById("contact-form");
-  const note = document.getElementById("form-note");
-  if (form) {
-    form.addEventListener("submit", (ev) => {
-      ev.preventDefault();
-      const name = form.name.value.trim();
-      const email = form.email.value.trim();
-      const message = form.message.value.trim();
-      const invalid = [];
-      if (!name) invalid.push(form.name);
-      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) invalid.push(form.email);
-      if (!message) invalid.push(form.message);
-      form.querySelectorAll(".is-invalid").forEach((el) => el.classList.remove("is-invalid"));
-      if (invalid.length) {
-        invalid.forEach((el) => el.classList.add("is-invalid"));
-        invalid[0].focus();
-        note.textContent = "Please fill in all fields with a valid email address.";
-        note.classList.add("is-error");
+  /* ------------------------------------------------ Craft: highlight technologies by project */
+  const craftGrid = document.getElementById("craft-grid");
+  const filters = Array.from(document.querySelectorAll(".filter"));
+  if (craftGrid && filters.length) {
+    const items = Array.from(craftGrid.querySelectorAll(".tech-list li"));
+    const apply = (key) => {
+      filters.forEach((f) => {
+        const on = f.dataset.filter === key;
+        f.classList.toggle("is-active", on);
+        f.setAttribute("aria-pressed", String(on));
+      });
+      if (key === "all") {
+        craftGrid.classList.remove("is-filtered");
+        items.forEach((li) => li.classList.remove("is-hit"));
         return;
       }
-      const subject = encodeURIComponent(`Portfolio enquiry from ${name}`);
-      const body = encodeURIComponent(`${message}\n\n— ${name}\n${email}`);
-      window.location.href = `mailto:dharun0108@gmail.com?subject=${subject}&body=${body}`;
-      note.textContent = "Your email app should open now with the message ready to send.";
-      note.classList.remove("is-error");
+      craftGrid.classList.add("is-filtered");
+      items.forEach((li) => li.classList.toggle("is-hit", (li.dataset.p || "").split(" ").includes(key)));
+    };
+    filters.forEach((f) => f.addEventListener("click", () => apply(f.dataset.filter)));
+  }
+
+  /* ------------------------------------------------ Impact: clinical data flow stages */
+  const stages = Array.from(document.querySelectorAll(".stage"));
+  const panels = Array.from(document.querySelectorAll(".stage-panel"));
+  const flowFill = document.getElementById("flow-fill");
+  const dots = Array.from(document.querySelectorAll(".flow-dots circle"));
+  const setStage = (idx, focus) => {
+    stages.forEach((s, i) => {
+      const on = i === idx;
+      s.classList.toggle("is-active", on);
+      s.setAttribute("aria-selected", String(on));
+      s.tabIndex = on ? 0 : -1;
+      if (on && focus) s.focus();
+    });
+    panels.forEach((p, i) => {
+      const on = i === idx;
+      p.classList.toggle("is-active", on);
+      p.hidden = !on;
+    });
+    if (flowFill) {
+      const total = 1080; // path length of the track
+      flowFill.style.strokeDashoffset = String(total - (total * idx) / 3);
+    }
+    dots.forEach((d, i) => d.classList.toggle("is-lit", i <= idx));
+  };
+  if (stages.length) {
+    setStage(0, false);
+    stages.forEach((s, i) => {
+      s.addEventListener("click", () => setStage(i, false));
+      s.addEventListener("keydown", (ev) => {
+        if (ev.key === "ArrowRight") { ev.preventDefault(); setStage((i + 1) % stages.length, true); }
+        if (ev.key === "ArrowLeft") { ev.preventDefault(); setStage((i - 1 + stages.length) % stages.length, true); }
+        if (ev.key === "Home") { ev.preventDefault(); setStage(0, true); }
+        if (ev.key === "End") { ev.preventDefault(); setStage(stages.length - 1, true); }
+      });
     });
   }
 
-  /* Footer year */
+  /* ------------------------------------------------ Contact form: honest mailto hand-off with inline validation */
+  const form = document.getElementById("contact-form");
+  const note = document.getElementById("form-note");
+  if (form) {
+    const fields = {
+      name: { el: form.name, err: document.getElementById("err-name"), ok: (v) => v.length > 0 },
+      email: { el: form.email, err: document.getElementById("err-email"), ok: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
+      message: { el: form.message, err: document.getElementById("err-message"), ok: (v) => v.length > 0 },
+    };
+    const validate = (key) => {
+      const f = fields[key];
+      const good = f.ok(f.el.value.trim());
+      f.el.classList.toggle("is-invalid", !good);
+      f.el.setAttribute("aria-invalid", String(!good));
+      if (f.err) f.err.hidden = good;
+      return good;
+    };
+    Object.keys(fields).forEach((k) => fields[k].el.addEventListener("blur", () => validate(k)));
+    form.addEventListener("submit", (ev) => {
+      ev.preventDefault();
+      const results = Object.keys(fields).map(validate);
+      if (results.includes(false)) {
+        const first = Object.keys(fields).find((k) => fields[k].el.classList.contains("is-invalid"));
+        fields[first].el.focus();
+        note.textContent = "Please complete the highlighted fields.";
+        note.className = "form-note is-error";
+        return;
+      }
+      const name = fields.name.el.value.trim();
+      const email = fields.email.el.value.trim();
+      const message = fields.message.el.value.trim();
+      const subject = encodeURIComponent(`Portfolio enquiry from ${name}`);
+      const body = encodeURIComponent(`${message}\n\n— ${name}\n${email}`);
+      window.location.href = `mailto:dharun0108@gmail.com?subject=${subject}&body=${body}`;
+      note.textContent = "Your email app should now be open with the message ready. Nothing is sent until you press send there.";
+      note.className = "form-note is-ok";
+    });
+  }
+
+  /* ------------------------------------------------ Footer year */
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 })();
