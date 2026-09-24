@@ -301,7 +301,7 @@
             </div>
 
             <figure class="case-arch" aria-label="TeleMEDIx architecture">
-              <svg class="arch" viewBox="40 18 462 540" role="img" aria-labelledby="arch-title">
+              <svg class="arch" viewBox="40 18 486 566" role="img" aria-labelledby="arch-title">
                 <title id="arch-title">Data flow: raw records are parsed, normalized per clinical section, mapped to terminologies, assembled into a canonical snapshot and scored for clinical decision support. Blob Storage, a Cosmos DB reference index and MongoDB support the flow.</title>
                 <defs>
                   <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#00a8ff"/></marker>
@@ -313,7 +313,7 @@
                   <g transform="translate(40 216)"><rect width="300" height="72" rx="6"/><text x="16" y="24" class="a-k">02 · NORMALIZE</text><text x="16" y="42" class="a-v">~25 section pipelines</text><text x="16" y="59" class="a-s">Problems · Medications · Labs · Vitals · Allergies · …</text></g>
                   <g transform="translate(40 328)"><rect width="300" height="72" rx="6"/><text x="16" y="24" class="a-k">03 · MAP</text><text x="16" y="42" class="a-v">Terminology mapping</text><text x="16" y="59" class="a-s">LOINC · SNOMED CT · ICD-10 · RxNorm · CPT · FDA</text></g>
                   <g transform="translate(40 440)"><rect width="300" height="56" rx="6"/><text x="16" y="24" class="a-k">04 · ASSEMBLE</text><text x="16" y="42" class="a-v">Canonical patient snapshot + provenance</text></g>
-                  <g class="a-end" transform="translate(40 520)"><rect width="300" height="32" rx="6"/><text x="16" y="21" class="a-v">15 clinical risk scores → clinical decision support</text></g>
+                  <g class="a-end" transform="translate(40 520)"><rect width="300" height="56" rx="6"/><text x="16" y="24" class="a-k">OUTPUT · 15 CLINICAL RISK SCORES</text><text x="16" y="42" class="a-v">Clinical decision support</text></g>
                 </g>
                 <g class="arch-spine">
                   <line x1="190" y1="80" x2="190" y2="120" marker-end="url(#arr)"/>
@@ -324,9 +324,9 @@
                 </g>
                 <!-- side stores -->
                 <g class="arch-stores">
-                  <g transform="translate(380 128)"><rect width="120" height="48" rx="6"/><text x="12" y="20" class="a-k">CACHE</text><text x="12" y="37" class="a-v a-v--sm">Azure Blob Storage</text></g>
-                  <g transform="translate(380 228)"><rect width="120" height="48" rx="6"/><text x="12" y="20" class="a-k">INDEX</text><text x="12" y="37" class="a-v a-v--sm">Cosmos DB reference</text></g>
-                  <g transform="translate(380 340)"><rect width="120" height="48" rx="6"/><text x="12" y="20" class="a-k">LOOKUP</text><text x="12" y="37" class="a-v a-v--sm">MongoDB terminology</text></g>
+                  <g transform="translate(380 128)"><rect width="140" height="48" rx="6"/><text x="12" y="20" class="a-k">CACHE</text><text x="12" y="37" class="a-v a-v--sm">Azure Blob Storage</text></g>
+                  <g transform="translate(380 228)"><rect width="140" height="48" rx="6"/><text x="12" y="20" class="a-k">INDEX</text><text x="12" y="37" class="a-v a-v--sm">Cosmos DB reference</text></g>
+                  <g transform="translate(380 340)"><rect width="140" height="48" rx="6"/><text x="12" y="20" class="a-k">LOOKUP</text><text x="12" y="37" class="a-v a-v--sm">MongoDB terminology</text></g>
                 </g>
                 <g class="arch-links">
                   <path d="M340 152 H380"/>
@@ -335,7 +335,7 @@
                 </g>
                 <!-- travelling packet -->
                 <circle class="arch-packet" r="4">
-                  <animateMotion dur="7s" repeatCount="indefinite" path="M190 52 V148 V252 V364 V468 V536" keyPoints="0;0.18;0.4;0.62;0.82;1" keyTimes="0;0.18;0.4;0.62;0.82;1" calcMode="linear"/>
+                  <animateMotion dur="7s" repeatCount="indefinite" path="M190 52 V148 V252 V364 V468 V548" keyPoints="0;0.18;0.4;0.62;0.82;1" keyTimes="0;0.18;0.4;0.62;0.82;1" calcMode="linear"/>
                 </circle>
               </svg>
               <figcaption class="mono muted">Fig. 02 — Normalization pipeline with cache-first data flow.</figcaption>
@@ -600,7 +600,7 @@
               <div><dt class="mono muted">Phone</dt><dd><a href="tel:+916383240397">+91&nbsp;6383240397</a></dd></div>
               <div><dt class="mono muted">Location</dt><dd>Erode, Tamil Nadu, India</dd></div>
               <div><dt class="mono muted">GitHub</dt><dd><a href="https://github.com/dharun0108" target="_blank" rel="noopener">github.com/dharun0108</a></dd></div>
-              <div><dt class="mono muted">LinkedIn</dt><dd><a href="https://linkedin.com/in/dharunsubramani01" target="_blank" rel="noopener">linkedin.com/in/dharunsubramani01</a></dd></div>
+              <div><dt class="mono muted">LinkedIn</dt><dd><a href="https://www.linkedin.com/in/dharun-subramani01/" target="_blank" rel="noopener">linkedin.com/in/dharun-subramani01</a></dd></div>
             </dl>
 
             <figure class="connect-figure reveal">

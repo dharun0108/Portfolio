@@ -334,9 +334,10 @@ em { font-family: var(--font-serif); font-style: italic; font-weight: 400; color
 .arch { width: 100%; height: auto; display: block; }
 .arch-nodes rect { fill: rgba(0,168,255,0.05); stroke: var(--rule-blue); stroke-width: 1; }
 .arch-nodes .a-end rect { fill: rgba(0,168,255,0.16); stroke: var(--blue); }
+.arch-nodes .a-end .a-k { fill: var(--blue-2); }
 .arch .a-k { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.12em; fill: var(--blue); }
 .arch .a-v { font-family: var(--font-head); font-size: 13px; font-weight: 600; fill: var(--ink); }
-.arch .a-v--sm { font-size: 11px; fill: var(--ink-2); }
+.arch .a-v--sm { font-size: 10.5px; fill: var(--ink-2); font-weight: 500; }
 .arch .a-s { font-family: var(--font-body); font-size: 10.5px; fill: var(--muted); }
 .arch-spine line { stroke: var(--blue); stroke-width: 1.2; }
 .arch-stores rect { fill: transparent; stroke: var(--rule-2); stroke-dasharray: 3 3; }
